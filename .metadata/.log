@@ -1,0 +1,813 @@
+!SESSION 2015-09-14 10:39:42.774 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-14 10:56:08.108
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'H:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-09-14 11:01:59.990
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-09-14 11:01:59.995
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-09-14 11:05:29.397
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-09-14 11:05:29.399
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-09-14 11:08:13.432
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-09-14 11:08:13.434
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-09-14 11:10:12.952
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-09-14 11:10:12.954
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-09-14 11:12:38.494
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-09-14 11:12:38.496
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2015-09-14 11:19:28.554
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at file:/C:/ide/sts-bundle/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at sun.reflect.GeneratedMethodAccessor78.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:300)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:196)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:394)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2015-09-14 11:19:28.557
+!MESSAGE No repository found at file:/C:/ide/sts-bundle/.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2015-09-14 11:21:04.739
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2015-09-14 11:21:04.739
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2015-09-14 11:21:04.739
+!MESSAGE Software being installed: SpringSource Tool Suite (required) 2.6.1.201105091000-RELEASE (com.springsource.sts.feature.group 2.6.1.201105091000-RELEASE)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2015-09-14 11:21:04.739
+!MESSAGE Missing requirement: com.springsource.sts.ide.ui 2.6.0.201105091000-RELEASE requires 'bundle org.eclipse.ajdt.ui 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-09-14 11:21:04.739
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-09-14 11:21:04.739
+!MESSAGE From: SpringSource Tool Suite (required) 2.6.1.201105091000-RELEASE (com.springsource.sts.feature.group 2.6.1.201105091000-RELEASE)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-09-14 11:21:04.739
+!MESSAGE To: com.springsource.sts.ide.ui [2.6.0.201105091000-RELEASE]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2015-09-14 11:21:04.759
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2015-09-14 11:21:04.759
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2015-09-14 11:21:04.759
+!MESSAGE Software being installed: SpringSource Tool Suite (required) 2.6.1.201105091000-RELEASE (com.springsource.sts.feature.group 2.6.1.201105091000-RELEASE)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2015-09-14 11:21:04.759
+!MESSAGE Missing requirement: com.springsource.sts.ide.ui 2.6.0.201105091000-RELEASE requires 'bundle org.eclipse.ajdt.ui 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-09-14 11:21:04.759
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-09-14 11:21:04.759
+!MESSAGE From: SpringSource Tool Suite (required) 2.6.1.201105091000-RELEASE (com.springsource.sts.feature.group 2.6.1.201105091000-RELEASE)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-09-14 11:21:04.759
+!MESSAGE To: com.springsource.sts.ide.ui [2.6.0.201105091000-RELEASE]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2015-09-14 11:21:04.797
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2015-09-14 11:21:04.797
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2015-09-14 11:21:04.797
+!MESSAGE Software being installed: SpringSource Tool Suite (required) 2.6.1.201105091000-RELEASE (com.springsource.sts.feature.group 2.6.1.201105091000-RELEASE)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2015-09-14 11:21:04.797
+!MESSAGE Missing requirement: com.springsource.sts.ide.ui 2.6.0.201105091000-RELEASE requires 'bundle org.eclipse.ajdt.ui 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-09-14 11:21:04.797
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-09-14 11:21:04.797
+!MESSAGE From: SpringSource Tool Suite (required) 2.6.1.201105091000-RELEASE (com.springsource.sts.feature.group 2.6.1.201105091000-RELEASE)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-09-14 11:21:04.797
+!MESSAGE To: com.springsource.sts.ide.ui [2.6.0.201105091000-RELEASE]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2015-09-14 11:21:04.801
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2015-09-14 11:21:04.802
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2015-09-14 11:21:04.802
+!MESSAGE Software being installed: SpringSource Tool Suite (required) 2.6.1.201105091000-RELEASE (com.springsource.sts.feature.group 2.6.1.201105091000-RELEASE)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2015-09-14 11:21:04.802
+!MESSAGE Missing requirement: com.springsource.sts.ide.ui 2.6.0.201105091000-RELEASE requires 'bundle org.eclipse.ajdt.ui 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-09-14 11:21:04.802
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-09-14 11:21:04.802
+!MESSAGE From: SpringSource Tool Suite (required) 2.6.1.201105091000-RELEASE (com.springsource.sts.feature.group 2.6.1.201105091000-RELEASE)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-09-14 11:21:04.802
+!MESSAGE To: com.springsource.sts.ide.ui [2.6.0.201105091000-RELEASE]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-09-14 11:23:14.074
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-09-14 11:23:14.075
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2015-09-14 11:23:19.459 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data file:/C:/Users/bilbowm/workspace/ -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.springframework.ide.eclipse.webflow.core 4 0 2015-09-14 11:23:24.150
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.webflow.core [1004]
+  Unresolved requirement: Import-Package: org.springframework.webflow.config; version="[2.0.7.A,2.1.0)"
+    -> Export-Package: org.springframework.webflow.config; bundle-symbolic-name="org.springframework.webflow"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="org.springframework.beans,org.springframework.beans.factory.support,org.springframework.beans.factory.xml,org.springframework.context,org.springframework.core.io,org.springframework.webflow.core.collection,org.springframework.webflow.definition.registry,org.springframework.webflow.engine.builder.support,org.springframework.webflow.engine.model.registry,org.springframework.webflow.execution.factory,org.w3c.dom"
+       org.springframework.webflow [1021]
+         Unresolved requirement: Import-Package: javax.persistence; version="[1.0.0,2.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: javax.portlet; version="[1.0.0,2.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: junit.framework; version="[3.8.2,4.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: ognl; version="[2.6.9,3.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.hibernate; version="[3.2.6.ga,4.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.hibernate.classic; version="[3.2.6.ga,4.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.security; version="[2.0.0,3.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.security.context; version="[2.0.0,3.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.security.vote; version="[2.0.0,3.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.web.portlet; version="[3.0.0,3.1.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.web.portlet.context; version="[3.0.0,3.1.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.web.portlet.handler; version="[3.0.0,3.1.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.web.portlet.multipart; version="[3.0.0,3.1.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.js.ajax.tiles2; version="[2.0.7,2.0.8)"
+           -> Export-Package: org.springframework.js.ajax.tiles2; bundle-symbolic-name="org.springframework.js"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="javax.servlet.http,org.apache.tiles,org.apache.tiles.context,org.apache.tiles.impl,org.springframework.js.ajax"
+              org.springframework.js [1010]
+                Unresolved requirement: Import-Package: org.apache.tiles; version="[2.0.5,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.apache.tiles.access; version="[2.0.5,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.apache.tiles.context; version="[2.0.5.osgi,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.apache.tiles.definition; version="[2.0.5.osgi,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.apache.tiles.impl; version="[2.0.5.osgi,3.0.0)"; resolution:="optional"
+         Unresolved requirement: Import-Package: org.springframework.js.ajax; version="[2.0.7,2.0.8)"
+           -> Export-Package: org.springframework.js.ajax; bundle-symbolic-name="org.springframework.js"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="javax.servlet.http,org.springframework.web.servlet"
+  Unresolved requirement: Import-Package: org.springframework.webflow.execution.factory; version="[2.0.7.A,2.1.0)"
+    -> Export-Package: org.springframework.webflow.execution.factory; bundle-symbolic-name="org.springframework.webflow"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="org.springframework.webflow.definition,org.springframework.webflow.execution"
+  Unresolved requirement: Import-Package: org.springframework.webflow.core.collection; version="[2.0.7.A,2.1.0)"
+    -> Export-Package: org.springframework.webflow.core.collection; bundle-symbolic-name="org.springframework.webflow"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="org.springframework.binding.collection,org.springframework.binding.convert,org.springframework.web.multipart"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.springframework.webflow [osgi.identity; osgi.identity="org.springframework.webflow"; type="osgi.bundle"; version:Version="2.0.7.A"] because it is exposed to package 'javax.el' from resources com.springsource.javax.el [osgi.identity; osgi.identity="com.springsource.javax.el"; type="osgi.bundle"; version:Version="1.0.0"] and javax.el [osgi.identity; osgi.identity="javax.el"; type="osgi.bundle"; version:Version="2.2.0.v201303151357"] via two dependency chains.
+
+Chain 1:
+  org.springframework.webflow [osgi.identity; osgi.identity="org.springframework.webflow"; type="osgi.bundle"; version:Version="2.0.7.A"]
+    import: (&(osgi.wiring.package=javax.el)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: javax.el
+  com.springsource.javax.el [osgi.identity; osgi.identity="com.springsource.javax.el"; type="osgi.bundle"; version:Version="1.0.0"]
+
+Chain 2:
+  org.springframework.webflow [osgi.identity; osgi.identity="org.springframework.webflow"; type="osgi.bundle"; version:Version="2.0.7.A"]
+    import: (&(osgi.wiring.package=org.springframework.beans.factory.access.el)(&(version>=3.0.0)(!(version>=3.1.0))))
+     |
+    export: osgi.wiring.package=org.springframework.beans.factory.access.el; uses:=javax.el
+  org.springframework.beans [osgi.identity; osgi.identity="org.springframework.beans"; type="osgi.bundle"; version:Version="3.0.5.RELEASE"]
+    import: (&(osgi.wiring.package=javax.el)(&(version>=1.0.0)(!(version>=3.0.0))))
+     |
+    export: osgi.wiring.package: javax.el
+  javax.el [osgi.identity; osgi.identity="javax.el"; type="osgi.bundle"; version:Version="2.2.0.v201303151357"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.springframework.ide.eclipse.webflow.ui 4 0 2015-09-14 11:23:24.162
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.webflow.ui [1005]
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core.internal.model.validation
+    -> Export-Package: org.springframework.ide.eclipse.webflow.core.internal.model.validation; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+       org.springframework.ide.eclipse.webflow.core [1004]
+         Unresolved requirement: Import-Package: org.springframework.webflow.config; version="[2.0.7.A,2.1.0)"
+           -> Export-Package: org.springframework.webflow.config; bundle-symbolic-name="org.springframework.webflow"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="org.springframework.beans,org.springframework.beans.factory.support,org.springframework.beans.factory.xml,org.springframework.context,org.springframework.core.io,org.springframework.webflow.core.collection,org.springframework.webflow.definition.registry,org.springframework.webflow.engine.builder.support,org.springframework.webflow.engine.model.registry,org.springframework.webflow.execution.factory,org.w3c.dom"
+              org.springframework.webflow [1021]
+                Unresolved requirement: Import-Package: javax.persistence; version="[1.0.0,2.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: javax.portlet; version="[1.0.0,2.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: junit.framework; version="[3.8.2,4.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: ognl; version="[2.6.9,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.hibernate; version="[3.2.6.ga,4.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.hibernate.classic; version="[3.2.6.ga,4.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.security; version="[2.0.0,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.security.context; version="[2.0.0,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.security.vote; version="[2.0.0,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.web.portlet; version="[3.0.0,3.1.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.web.portlet.context; version="[3.0.0,3.1.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.web.portlet.handler; version="[3.0.0,3.1.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.web.portlet.multipart; version="[3.0.0,3.1.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.js.ajax.tiles2; version="[2.0.7,2.0.8)"
+                  -> Export-Package: org.springframework.js.ajax.tiles2; bundle-symbolic-name="org.springframework.js"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="javax.servlet.http,org.apache.tiles,org.apache.tiles.context,org.apache.tiles.impl,org.springframework.js.ajax"
+                     org.springframework.js [1010]
+                       Unresolved requirement: Import-Package: org.apache.tiles; version="[2.0.5,3.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.apache.tiles.access; version="[2.0.5,3.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.apache.tiles.context; version="[2.0.5.osgi,3.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.apache.tiles.definition; version="[2.0.5.osgi,3.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.apache.tiles.impl; version="[2.0.5.osgi,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.js.ajax; version="[2.0.7,2.0.8)"
+                  -> Export-Package: org.springframework.js.ajax; bundle-symbolic-name="org.springframework.js"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="javax.servlet.http,org.springframework.web.servlet"
+         Unresolved requirement: Import-Package: org.springframework.webflow.execution.factory; version="[2.0.7.A,2.1.0)"
+           -> Export-Package: org.springframework.webflow.execution.factory; bundle-symbolic-name="org.springframework.webflow"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="org.springframework.webflow.definition,org.springframework.webflow.execution"
+         Unresolved requirement: Import-Package: org.springframework.webflow.core.collection; version="[2.0.7.A,2.1.0)"
+           -> Export-Package: org.springframework.webflow.core.collection; bundle-symbolic-name="org.springframework.webflow"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="org.springframework.binding.collection,org.springframework.binding.convert,org.springframework.web.multipart"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow
+    -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+       org.springframework.ide.eclipse.webflow.ui.editor [1006]
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core.internal.model
+           -> Export-Package: org.springframework.ide.eclipse.webflow.core.internal.model; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core
+           -> Export-Package: org.springframework.ide.eclipse.webflow.core; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.webflow.engine.builder; version="[2.0.7.A,2.1.0)"
+           -> Export-Package: org.springframework.webflow.engine.builder; bundle-symbolic-name="org.springframework.webflow"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="org.springframework.binding.convert,org.springframework.binding.expression,org.springframework.binding.mapping,org.springframework.context,org.springframework.webflow.core.collection,org.springframework.webflow.definition,org.springframework.webflow.definition.registry,org.springframework.webflow.engine,org.springframework.webflow.execution"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core.model
+           -> Export-Package: org.springframework.ide.eclipse.webflow.core.model; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.graph
+    -> Export-Package: org.springframework.ide.eclipse.webflow.ui.graph; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.graph"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+       org.springframework.ide.eclipse.webflow.ui.graph [1007]
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow
+           -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core.model
+           -> Export-Package: org.springframework.ide.eclipse.webflow.core.model; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core.internal.model.validation
+           -> Export-Package: org.springframework.ide.eclipse.webflow.core.internal.model.validation; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core.internal.model
+           -> Export-Package: org.springframework.ide.eclipse.webflow.core.internal.model; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core
+           -> Export-Package: org.springframework.ide.eclipse.webflow.core; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor
+           -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core.model
+    -> Export-Package: org.springframework.ide.eclipse.webflow.core.model; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core
+    -> Export-Package: org.springframework.ide.eclipse.webflow.core; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core.internal.model
+    -> Export-Package: org.springframework.ide.eclipse.webflow.core.internal.model; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.springframework.webflow [osgi.identity; osgi.identity="org.springframework.webflow"; type="osgi.bundle"; version:Version="2.0.7.A"] because it is exposed to package 'javax.el' from resources com.springsource.javax.el [osgi.identity; osgi.identity="com.springsource.javax.el"; type="osgi.bundle"; version:Version="1.0.0"] and javax.el [osgi.identity; osgi.identity="javax.el"; type="osgi.bundle"; version:Version="2.2.0.v201303151357"] via two dependency chains.
+
+Chain 1:
+  org.springframework.webflow [osgi.identity; osgi.identity="org.springframework.webflow"; type="osgi.bundle"; version:Version="2.0.7.A"]
+    import: (&(osgi.wiring.package=javax.el)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: javax.el
+  com.springsource.javax.el [osgi.identity; osgi.identity="com.springsource.javax.el"; type="osgi.bundle"; version:Version="1.0.0"]
+
+Chain 2:
+  org.springframework.webflow [osgi.identity; osgi.identity="org.springframework.webflow"; type="osgi.bundle"; version:Version="2.0.7.A"]
+    import: (&(osgi.wiring.package=org.springframework.beans.factory.access.el)(&(version>=3.0.0)(!(version>=3.1.0))))
+     |
+    export: osgi.wiring.package=org.springframework.beans.factory.access.el; uses:=javax.el
+  org.springframework.beans [osgi.identity; osgi.identity="org.springframework.beans"; type="osgi.bundle"; version:Version="3.0.5.RELEASE"]
+    import: (&(osgi.wiring.package=javax.el)(&(version>=1.0.0)(!(version>=3.0.0))))
+     |
+    export: osgi.wiring.package: javax.el
+  javax.el [osgi.identity; osgi.identity="javax.el"; type="osgi.bundle"; version:Version="2.2.0.v201303151357"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.springframework.ide.eclipse.webflow.ui.editor 4 0 2015-09-14 11:23:24.174
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.webflow.ui.editor [1006]
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core.internal.model
+    -> Export-Package: org.springframework.ide.eclipse.webflow.core.internal.model; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+       org.springframework.ide.eclipse.webflow.core [1004]
+         Unresolved requirement: Import-Package: org.springframework.webflow.config; version="[2.0.7.A,2.1.0)"
+           -> Export-Package: org.springframework.webflow.config; bundle-symbolic-name="org.springframework.webflow"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="org.springframework.beans,org.springframework.beans.factory.support,org.springframework.beans.factory.xml,org.springframework.context,org.springframework.core.io,org.springframework.webflow.core.collection,org.springframework.webflow.definition.registry,org.springframework.webflow.engine.builder.support,org.springframework.webflow.engine.model.registry,org.springframework.webflow.execution.factory,org.w3c.dom"
+              org.springframework.webflow [1021]
+                Unresolved requirement: Import-Package: javax.persistence; version="[1.0.0,2.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: javax.portlet; version="[1.0.0,2.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: junit.framework; version="[3.8.2,4.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: ognl; version="[2.6.9,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.hibernate; version="[3.2.6.ga,4.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.hibernate.classic; version="[3.2.6.ga,4.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.security; version="[2.0.0,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.security.context; version="[2.0.0,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.security.vote; version="[2.0.0,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.web.portlet; version="[3.0.0,3.1.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.web.portlet.context; version="[3.0.0,3.1.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.web.portlet.handler; version="[3.0.0,3.1.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.web.portlet.multipart; version="[3.0.0,3.1.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.js.ajax.tiles2; version="[2.0.7,2.0.8)"
+                  -> Export-Package: org.springframework.js.ajax.tiles2; bundle-symbolic-name="org.springframework.js"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="javax.servlet.http,org.apache.tiles,org.apache.tiles.context,org.apache.tiles.impl,org.springframework.js.ajax"
+                     org.springframework.js [1010]
+                       Unresolved requirement: Import-Package: org.apache.tiles; version="[2.0.5,3.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.apache.tiles.access; version="[2.0.5,3.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.apache.tiles.context; version="[2.0.5.osgi,3.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.apache.tiles.definition; version="[2.0.5.osgi,3.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.apache.tiles.impl; version="[2.0.5.osgi,3.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.springframework.js.ajax; version="[2.0.7,2.0.8)"
+                  -> Export-Package: org.springframework.js.ajax; bundle-symbolic-name="org.springframework.js"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="javax.servlet.http,org.springframework.web.servlet"
+         Unresolved requirement: Import-Package: org.springframework.webflow.execution.factory; version="[2.0.7.A,2.1.0)"
+           -> Export-Package: org.springframework.webflow.execution.factory; bundle-symbolic-name="org.springframework.webflow"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="org.springframework.webflow.definition,org.springframework.webflow.execution"
+         Unresolved requirement: Import-Package: org.springframework.webflow.core.collection; version="[2.0.7.A,2.1.0)"
+           -> Export-Package: org.springframework.webflow.core.collection; bundle-symbolic-name="org.springframework.webflow"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="org.springframework.binding.collection,org.springframework.binding.convert,org.springframework.web.multipart"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core
+    -> Export-Package: org.springframework.ide.eclipse.webflow.core; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.webflow.engine.builder; version="[2.0.7.A,2.1.0)"
+    -> Export-Package: org.springframework.webflow.engine.builder; bundle-symbolic-name="org.springframework.webflow"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="org.springframework.binding.convert,org.springframework.binding.expression,org.springframework.binding.mapping,org.springframework.context,org.springframework.webflow.core.collection,org.springframework.webflow.definition,org.springframework.webflow.definition.registry,org.springframework.webflow.engine,org.springframework.webflow.execution"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core.model
+    -> Export-Package: org.springframework.ide.eclipse.webflow.core.model; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.springframework.webflow [osgi.identity; osgi.identity="org.springframework.webflow"; type="osgi.bundle"; version:Version="2.0.7.A"] because it is exposed to package 'javax.el' from resources com.springsource.javax.el [osgi.identity; osgi.identity="com.springsource.javax.el"; type="osgi.bundle"; version:Version="1.0.0"] and javax.el [osgi.identity; osgi.identity="javax.el"; type="osgi.bundle"; version:Version="2.2.0.v201303151357"] via two dependency chains.
+
+Chain 1:
+  org.springframework.webflow [osgi.identity; osgi.identity="org.springframework.webflow"; type="osgi.bundle"; version:Version="2.0.7.A"]
+    import: (&(osgi.wiring.package=javax.el)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: javax.el
+  com.springsource.javax.el [osgi.identity; osgi.identity="com.springsource.javax.el"; type="osgi.bundle"; version:Version="1.0.0"]
+
+Chain 2:
+  org.springframework.webflow [osgi.identity; osgi.identity="org.springframework.webflow"; type="osgi.bundle"; version:Version="2.0.7.A"]
+    import: (&(osgi.wiring.package=org.springframework.beans.factory.access.el)(&(version>=3.0.0)(!(version>=3.1.0))))
+     |
+    export: osgi.wiring.package=org.springframework.beans.factory.access.el; uses:=javax.el
+  org.springframework.beans [osgi.identity; osgi.identity="org.springframework.beans"; type="osgi.bundle"; version:Version="3.0.5.RELEASE"]
+    import: (&(osgi.wiring.package=javax.el)(&(version>=1.0.0)(!(version>=3.0.0))))
+     |
+    export: osgi.wiring.package: javax.el
+  javax.el [osgi.identity; osgi.identity="javax.el"; type="osgi.bundle"; version:Version="2.2.0.v201303151357"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.springframework.ide.eclipse.webflow.ui.graph 4 0 2015-09-14 11:23:24.188
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.webflow.ui.graph [1007]
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow
+    -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+       org.springframework.ide.eclipse.webflow.ui.editor [1006]
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core.internal.model
+           -> Export-Package: org.springframework.ide.eclipse.webflow.core.internal.model; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+              org.springframework.ide.eclipse.webflow.core [1004]
+                Unresolved requirement: Import-Package: org.springframework.webflow.config; version="[2.0.7.A,2.1.0)"
+                  -> Export-Package: org.springframework.webflow.config; bundle-symbolic-name="org.springframework.webflow"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="org.springframework.beans,org.springframework.beans.factory.support,org.springframework.beans.factory.xml,org.springframework.context,org.springframework.core.io,org.springframework.webflow.core.collection,org.springframework.webflow.definition.registry,org.springframework.webflow.engine.builder.support,org.springframework.webflow.engine.model.registry,org.springframework.webflow.execution.factory,org.w3c.dom"
+                     org.springframework.webflow [1021]
+                       Unresolved requirement: Import-Package: javax.persistence; version="[1.0.0,2.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: javax.portlet; version="[1.0.0,2.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: junit.framework; version="[3.8.2,4.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: ognl; version="[2.6.9,3.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.hibernate; version="[3.2.6.ga,4.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.hibernate.classic; version="[3.2.6.ga,4.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.springframework.security; version="[2.0.0,3.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.springframework.security.context; version="[2.0.0,3.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.springframework.security.vote; version="[2.0.0,3.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.springframework.web.portlet; version="[3.0.0,3.1.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.springframework.web.portlet.context; version="[3.0.0,3.1.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.springframework.web.portlet.handler; version="[3.0.0,3.1.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.springframework.web.portlet.multipart; version="[3.0.0,3.1.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.springframework.js.ajax.tiles2; version="[2.0.7,2.0.8)"
+                         -> Export-Package: org.springframework.js.ajax.tiles2; bundle-symbolic-name="org.springframework.js"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="javax.servlet.http,org.apache.tiles,org.apache.tiles.context,org.apache.tiles.impl,org.springframework.js.ajax"
+                            org.springframework.js [1010]
+                              Unresolved requirement: Import-Package: org.apache.tiles; version="[2.0.5,3.0.0)"; resolution:="optional"
+                              Unresolved requirement: Import-Package: org.apache.tiles.access; version="[2.0.5,3.0.0)"; resolution:="optional"
+                              Unresolved requirement: Import-Package: org.apache.tiles.context; version="[2.0.5.osgi,3.0.0)"; resolution:="optional"
+                              Unresolved requirement: Import-Package: org.apache.tiles.definition; version="[2.0.5.osgi,3.0.0)"; resolution:="optional"
+                              Unresolved requirement: Import-Package: org.apache.tiles.impl; version="[2.0.5.osgi,3.0.0)"; resolution:="optional"
+                       Unresolved requirement: Import-Package: org.springframework.js.ajax; version="[2.0.7,2.0.8)"
+                         -> Export-Package: org.springframework.js.ajax; bundle-symbolic-name="org.springframework.js"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="javax.servlet.http,org.springframework.web.servlet"
+                Unresolved requirement: Import-Package: org.springframework.webflow.execution.factory; version="[2.0.7.A,2.1.0)"
+                  -> Export-Package: org.springframework.webflow.execution.factory; bundle-symbolic-name="org.springframework.webflow"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="org.springframework.webflow.definition,org.springframework.webflow.execution"
+                Unresolved requirement: Import-Package: org.springframework.webflow.core.collection; version="[2.0.7.A,2.1.0)"
+                  -> Export-Package: org.springframework.webflow.core.collection; bundle-symbolic-name="org.springframework.webflow"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="org.springframework.binding.collection,org.springframework.binding.convert,org.springframework.web.multipart"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core
+           -> Export-Package: org.springframework.ide.eclipse.webflow.core; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.webflow.engine.builder; version="[2.0.7.A,2.1.0)"
+           -> Export-Package: org.springframework.webflow.engine.builder; bundle-symbolic-name="org.springframework.webflow"; bundle-version="2.0.7.A"; version="2.0.7.A"; uses:="org.springframework.binding.convert,org.springframework.binding.expression,org.springframework.binding.mapping,org.springframework.context,org.springframework.webflow.core.collection,org.springframework.webflow.definition,org.springframework.webflow.definition.registry,org.springframework.webflow.engine,org.springframework.webflow.execution"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core.model
+           -> Export-Package: org.springframework.ide.eclipse.webflow.core.model; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core.model
+    -> Export-Package: org.springframework.ide.eclipse.webflow.core.model; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core.internal.model.validation
+    -> Export-Package: org.springframework.ide.eclipse.webflow.core.internal.model.validation; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core.internal.model
+    -> Export-Package: org.springframework.ide.eclipse.webflow.core.internal.model; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.core
+    -> Export-Package: org.springframework.ide.eclipse.webflow.core; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.core"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor
+    -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="2.6.0.201103160035-RELEASE"; version="0.0.0"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.springframework.webflow [osgi.identity; osgi.identity="org.springframework.webflow"; type="osgi.bundle"; version:Version="2.0.7.A"] because it is exposed to package 'javax.el' from resources com.springsource.javax.el [osgi.identity; osgi.identity="com.springsource.javax.el"; type="osgi.bundle"; version:Version="1.0.0"] and javax.el [osgi.identity; osgi.identity="javax.el"; type="osgi.bundle"; version:Version="2.2.0.v201303151357"] via two dependency chains.
+
+Chain 1:
+  org.springframework.webflow [osgi.identity; osgi.identity="org.springframework.webflow"; type="osgi.bundle"; version:Version="2.0.7.A"]
+    import: (&(osgi.wiring.package=javax.el)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: javax.el
+  com.springsource.javax.el [osgi.identity; osgi.identity="com.springsource.javax.el"; type="osgi.bundle"; version:Version="1.0.0"]
+
+Chain 2:
+  org.springframework.webflow [osgi.identity; osgi.identity="org.springframework.webflow"; type="osgi.bundle"; version:Version="2.0.7.A"]
+    import: (&(osgi.wiring.package=org.springframework.beans.factory.access.el)(&(version>=3.0.0)(!(version>=3.1.0))))
+     |
+    export: osgi.wiring.package=org.springframework.beans.factory.access.el; uses:=javax.el
+  org.springframework.beans [osgi.identity; osgi.identity="org.springframework.beans"; type="osgi.bundle"; version:Version="3.0.5.RELEASE"]
+    import: (&(osgi.wiring.package=javax.el)(&(version>=1.0.0)(!(version>=3.0.0))))
+     |
+    export: osgi.wiring.package: javax.el
+  javax.el [osgi.identity; osgi.identity="javax.el"; type="osgi.bundle"; version:Version="2.2.0.v201303151357"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-14 11:23:32.386
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'H:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-09-14 11:28:18.822
+!MESSAGE Failed to read Maven project: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 5, column 11
+ for project org.springframework:gs-rest-service:0.1.0 at C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml
+!STACK 0
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 5, column 11
+ for project org.springframework:gs-rest-service:0.1.0 at C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:168)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:815)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:956)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:191)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:80)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:729)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1050)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 5, column 11
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.readParentExternally(DefaultModelBuilder.java:1007)
+	at org.apache.maven.model.building.DefaultModelBuilder.readParent(DefaultModelBuilder.java:796)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:325)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161)
+	... 15 more
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-09-14 11:28:30.254
+!MESSAGE Failed to read Maven project: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 5, column 11
+ for project org.springframework:gs-rest-service:0.1.0 at C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml
+!STACK 0
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 5, column 11
+ for project org.springframework:gs-rest-service:0.1.0 at C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:168)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:815)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:956)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:191)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:80)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$LoadEffectivePomJob.run(MavenPomEditor.java:463)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 5, column 11
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.readParentExternally(DefaultModelBuilder.java:1007)
+	at org.apache.maven.model.building.DefaultModelBuilder.readParent(DefaultModelBuilder.java:796)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:325)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161)
+	... 14 more
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-09-14 11:29:11.572
+!MESSAGE Failed to read Maven project: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 5, column 11
+ for project org.springframework:gs-rest-service:0.1.0 at C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml
+!STACK 0
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 5, column 11
+ for project org.springframework:gs-rest-service:0.1.0 at C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:168)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:815)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:956)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:191)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:80)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:729)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1050)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 5, column 11
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.readParentExternally(DefaultModelBuilder.java:1007)
+	at org.apache.maven.model.building.DefaultModelBuilder.readParent(DefaultModelBuilder.java:796)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:325)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161)
+	... 15 more
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-09-14 11:29:16.340
+!MESSAGE Failed to read Maven project: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 5, column 11
+ for project org.springframework:gs-rest-service:0.1.0 at C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml
+!STACK 0
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 5, column 11
+ for project org.springframework:gs-rest-service:0.1.0 at C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:168)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:815)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:956)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:191)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:80)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:729)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1050)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 5, column 11
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.readParentExternally(DefaultModelBuilder.java:1007)
+	at org.apache.maven.model.building.DefaultModelBuilder.readParent(DefaultModelBuilder.java:796)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:325)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161)
+	... 15 more
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-09-14 11:29:39.330
+!MESSAGE Failed to read Maven project: 1 problem was encountered while building the effective model
+[FATAL] Non-parseable POM C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml: Duplicated tag: 'artifactId' (position: START_TAG seen ...</parent>\r\n  <artifactId>... @11:15)  @ line 11, column 15
+ for project  at C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml
+!STACK 0
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-parseable POM C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml: Duplicated tag: 'artifactId' (position: START_TAG seen ...</parent>\r\n  <artifactId>... @11:15)  @ line 11, column 15
+ for project  at C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:168)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:815)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:956)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:191)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:80)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:729)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1050)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-parseable POM C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml: Duplicated tag: 'artifactId' (position: START_TAG seen ...</parent>\r\n  <artifactId>... @11:15)  @ line 11, column 15
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.readModel(DefaultModelBuilder.java:575)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:269)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161)
+	... 15 more
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-09-14 11:29:39.338
+!MESSAGE Failed to read Maven project: 1 problem was encountered while building the effective model
+[FATAL] Non-parseable POM C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml: Duplicated tag: 'artifactId' (position: START_TAG seen ...</parent>\r\n  <artifactId>... @11:15)  @ line 11, column 15
+ for project  at C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml
+!STACK 0
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-parseable POM C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml: Duplicated tag: 'artifactId' (position: START_TAG seen ...</parent>\r\n  <artifactId>... @11:15)  @ line 11, column 15
+ for project  at C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:168)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:815)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:956)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:191)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:80)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:729)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1050)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-parseable POM C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml: Duplicated tag: 'artifactId' (position: START_TAG seen ...</parent>\r\n  <artifactId>... @11:15)  @ line 11, column 15
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.readModel(DefaultModelBuilder.java:575)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:269)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161)
+	... 15 more
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-09-14 11:29:39.475
+!MESSAGE Could not read pom.xml
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read pom.xml
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:565)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:574)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:541)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:497)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:350)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:297)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:154)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod$1.call(MavenBuilder.java:89)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:86)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:200)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.apache.maven.model.io.ModelParseException: Duplicated tag: 'artifactId' (position: START_TAG seen ...</parent>\r\n  <artifactId>... @11:15) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:130)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:94)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:563)
+	... 24 more
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Duplicated tag: 'artifactId' (position: START_TAG seen ...</parent>\r\n  <artifactId>... @11:15) 
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.checkFieldWithDuplicate(MavenXpp3Reader.java:114)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2044)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:3807)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:557)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:125)
+	... 26 more
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2015-09-14 11:29:39.476
+!MESSAGE Could not read pom.xml
+!STACK 0
+org.apache.maven.model.io.ModelParseException: Duplicated tag: 'artifactId' (position: START_TAG seen ...</parent>\r\n  <artifactId>... @11:15) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:130)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:94)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:563)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:574)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:541)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:497)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:350)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:297)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:154)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod$1.call(MavenBuilder.java:89)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:86)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:200)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Duplicated tag: 'artifactId' (position: START_TAG seen ...</parent>\r\n  <artifactId>... @11:15) 
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.checkFieldWithDuplicate(MavenXpp3Reader.java:114)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2044)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:3807)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:557)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:125)
+	... 26 more
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-09-14 11:29:57.519
+!MESSAGE Failed to read Maven project: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 8, column 11
+ for project org.springframework:gs-rest-service:0.1.0 at C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml
+!STACK 0
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 8, column 11
+ for project org.springframework:gs-rest-service:0.1.0 at C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:168)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:815)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:956)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:191)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:80)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:729)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1050)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 8, column 11
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.readParentExternally(DefaultModelBuilder.java:1007)
+	at org.apache.maven.model.building.DefaultModelBuilder.readParent(DefaultModelBuilder.java:796)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:325)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161)
+	... 15 more
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-09-14 11:29:57.525
+!MESSAGE Failed to read Maven project: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 8, column 11
+ for project org.springframework:gs-rest-service:0.1.0 at C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml
+!STACK 0
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 8, column 11
+ for project org.springframework:gs-rest-service:0.1.0 at C:\Users\bilbowm\workspace\spring-boot-starter-parent\pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:168)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:815)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:956)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:191)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:80)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:729)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1050)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model for org.springframework:gs-rest-service:0.1.0
+[FATAL] Non-resolvable parent POM for org.springframework:gs-rest-service:0.1.0: Failure to find org.springframework:spring-boot-starter-parent:pom:1.2.5.RELEASE in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced and 'parent.relativePath' points at wrong local POM @ line 8, column 11
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.readParentExternally(DefaultModelBuilder.java:1007)
+	at org.apache.maven.model.building.DefaultModelBuilder.readParent(DefaultModelBuilder.java:796)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:325)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161)
+	... 15 more

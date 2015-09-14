@@ -1,0 +1,33 @@
+
+public class Threader extends Thread {
+
+	class Runner implements Runnable {
+
+		@Override
+		public void run() {
+			for (int i = 0; i<100; ++i)
+				System.out.println("Runner: " + i);
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		Threader t = new Threader();
+		t.start();
+		new Threader().start();
+		new Threader().start();
+		Thread th = new Thread(new Runner());//.start();
+		for (int i = 0; i<100; ++i)
+			System.out.println("Main: " + i);
+	}
+
+	@Override
+	public void run() {
+		
+		for (int i = 0; i < 100; ++i) {
+			System.out.println("Threader: " + i);
+		}
+		super.run();
+	}
+
+}

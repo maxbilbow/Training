@@ -1,0 +1,22 @@
+
+public class Threader extends Thread {
+
+	
+	
+	public static void main(String[] args) {
+		Threader t = new Threader();
+		t.start();
+		for (int i = 0; i<100; ++i)
+			System.out.println("Main: " + i);
+	}
+
+	@Override
+	public void run() {
+		
+		for (int i = 0; i < 100; ++i) {
+			System.out.println("Threader: " + i);
+		}
+		super.run();
+	}
+
+}

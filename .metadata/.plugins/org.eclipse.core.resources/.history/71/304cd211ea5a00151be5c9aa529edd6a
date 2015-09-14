@@ -1,0 +1,14 @@
+
+public enum AnEnum {
+	Hello(s), Goodbye(s);
+	
+	private AnEnum(String name)
+	{
+		
+	}
+	
+	public String toString() 
+	{
+		return "ddd";
+	}
+}

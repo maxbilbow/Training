@@ -1,0 +1,35 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class IOWatsit  {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String text = getTextFromFile("C:\\temp\\testFile.txt");
+	}
+
+	private static String getTextFromFile(String path) {
+		String result = "";
+		try {
+			FileReader reader = new FileReader(path);
+			reader.read();
+			result = reader.toString();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			result += e.getMessage();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			result += e.getMessage();
+		}
+
+		return result;
+	}
+
+	
+
+}

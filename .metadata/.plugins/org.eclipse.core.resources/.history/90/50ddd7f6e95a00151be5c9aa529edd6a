@@ -1,0 +1,9 @@
+
+public enum AnEnum {
+	Hello, Goodbye;
+	
+	public String toString() 
+	{
+		return "ddd";
+	}
+}

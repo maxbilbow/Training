@@ -1,0 +1,24 @@
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class IOWatsit extends InputStream {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String text = getTextFromFile("C:\\temp\\testFile.txt");
+	}
+
+	private static String getTextFromFile(String path) {
+		FileReader reader = new FileReader(path);
+		return null;
+	}
+
+	@Override
+	public int read() throws IOException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

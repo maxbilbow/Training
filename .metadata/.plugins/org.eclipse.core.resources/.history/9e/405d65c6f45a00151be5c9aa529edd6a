@@ -1,0 +1,5 @@
+
+public @interface Something {
+	String defaultThing();
+	int defaultNumber();
+}

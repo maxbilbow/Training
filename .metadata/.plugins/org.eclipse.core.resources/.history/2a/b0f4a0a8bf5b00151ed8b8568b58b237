@@ -1,0 +1,41 @@
+package part6.jss;
+
+import javax.script.Bindings;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
+
+import javafx.stage.Stage;
+
+public class Scripter {
+	String title = "Null";
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	
+	ScriptEngineManager manager = new ScriptEngineManager();
+	ScriptEngine engine = manager.getEngineByName("nashorn");
+	String script() {
+		return "stage.title = 'Whhaa?!'";
+	}
+	public void start(Object stage) {
+		Bindings scope = engine.createBindings();
+		scope.put("stage", stage);
+		try {
+			engine.eval(script(), scope);
+		} catch (ScriptException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		Scripter s = new Scripter();
+		
+		s.start(s);
+		
+		System.out.println(s.title);
+	}
+
+}

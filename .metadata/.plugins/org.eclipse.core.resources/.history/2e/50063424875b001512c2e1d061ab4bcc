@@ -1,0 +1,7 @@
+package java8;
+
+import java.io.File;
+
+public interface FileFilter extends FilenameFilter {
+	public boolean accept(File file);
+}

@@ -1,0 +1,67 @@
+package java8;
+
+import java.util.*;
+import java.io.File;
+import java.nio.file.Files;
+
+public class JavaFileFilter {
+
+
+
+	private static List<File> closures(String url) throws UnsupportedOperationException {
+		final File dir = new File(url);
+		File[] files = dir.listFiles(new FileFilter() {
+
+			@Override
+			public boolean accept(File dir, String name) {
+				System.out.println(name);
+				return name != null ? name.endsWith(".java") : false;
+			}
+
+		});
+		System.out.println(files.length);
+		return makeList(files);
+	}
+
+	private static List<File> lambderFiles(String url) {
+		final File dir = new File(url);
+		FileFilter fileFilter = (File file, String name) -> {  
+				System.out.println(name);
+				return file.getName().endsWith(".java");
+				};
+		return makeList(
+				dir.listFiles(fileFilter)
+				);
+	}
+
+	private static List<File> makeList(File[] array){
+		List<T> list = Collections.emptyList();
+		for (T t : array) {
+			System.out.println("Adding: " + t);
+			list.add(t);
+		}
+		return list;
+	}
+
+	public static void main(String[] args) {
+		String dir = "C:\\temp";
+		List<File> javaFiles = null;
+		try {
+			javaFiles = closures(dir);
+			System.out.println("Without Lambda: " + javaFiles.size());
+			javaFiles.forEach(System.out::println);
+		} catch (UnsupportedOperationException e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		
+		List<File> lambdaFiles = lambderFiles(dir);
+		System.out.println("   WITH Lambda: " + lambdaFiles.size());
+		lambdaFiles.forEach(f -> System.out.println(f.getName()));
+
+	}
+
+
+
+
+}

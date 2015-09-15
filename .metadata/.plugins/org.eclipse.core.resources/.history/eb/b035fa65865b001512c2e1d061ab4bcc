@@ -1,0 +1,14 @@
+package java8;
+/**
+ * Lambda expressions
+ * Stream API and Collections
+ * Java FX
+ * Nashorn
+ * @author bilbowm
+ *
+ */
+public class Java8 {
+	public static void main(String[] args) {
+		
+	}
+}

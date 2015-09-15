@@ -1,0 +1,13 @@
+package java8;
+
+interface IPredicate<T> {
+	
+}
+public class Predicate {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

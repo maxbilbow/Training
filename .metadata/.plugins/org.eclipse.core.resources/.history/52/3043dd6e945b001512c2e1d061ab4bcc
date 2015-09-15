@@ -1,0 +1,20 @@
+package java8;
+
+import java.util.Objects;
+
+interface IPredicate<T> {
+	boolean test(T t);
+	
+	default IPredicate<T> and(IPredicate<? super T> other) {
+		Objects.requireNonNull(other);
+		return (t) -> test(t) && other.test(t);
+	}
+}
+public class Predicate {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package fjwa;
+
+import java.sql.SQLException;
+
+public interface IWebInterface {
+	void openNewConnection() throws SQLException, ClassNotFoundException;
+	void closeConnection();
+	
+	void setContext(TableData table) throws FJWAException;
+	void clearContext();
+	
+	void setValueForKey(String key, Object value);
+	void getValue(String key);
+	boolean isConnected();
+	
+	init();
+	
+	default static IWebInterface newConnectedInterface() {
+		IWebInterface i= new IWebInterface();
+		return i;
+	}
+	
+}

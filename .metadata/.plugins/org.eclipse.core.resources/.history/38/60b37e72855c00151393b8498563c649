@@ -1,0 +1,16 @@
+
+public class MemoryManager {
+
+	public static long addressOf(Object o) {
+		
+		
+		
+		return -1;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,22 @@
+package click.rmx.tests;
+
+
+public class Tests {
+	public static void todo() {
+		StackTraceElement trace = Thread.currentThread().getStackTrace()[2];
+		String file = trace.getFileName();
+		if (file.endsWith(".java"))
+			file = file.substring(0, file.length() - 5);
+		String method = trace.getMethodName();
+		System.out.println(file + "::" + method + "() not yet implemented");
+	}
+	
+	public static void todo(String s) {
+		StackTraceElement trace = Thread.currentThread().getStackTrace()[2];
+		String file = trace.getFileName();
+		if (file.endsWith(".java"))
+			file = file.substring(0, file.length() - 5);
+		String method = trace.getMethodName();
+		System.out.println(file + "::" + method + "() not yet implemented");
+	}
+}

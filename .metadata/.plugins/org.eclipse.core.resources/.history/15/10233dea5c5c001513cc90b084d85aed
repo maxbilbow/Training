@@ -1,0 +1,11 @@
+package click.rmx.tests;
+
+public class ConsoleRunner {
+
+	public static void main(String[] args) {
+		JUnitCore junit = new JUnitCore();
+		
+
+	}
+
+}

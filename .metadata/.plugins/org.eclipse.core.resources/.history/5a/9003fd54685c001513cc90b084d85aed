@@ -1,0 +1,14 @@
+package fjwa;
+
+public enum TableData {
+	contact_information("contact_information");
+	private String name;
+	
+	private TableData(String name) {
+		this.name = name;
+	}
+	
+	public toString() {
+		return name;
+	}
+}

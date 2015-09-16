@@ -1,0 +1,9 @@
+package fjwa;
+
+public class FJWAException extends Exception {
+	public final Exception exception;
+	public FJWAException(Exception exception, String message) {
+		super(message);
+		this.exception = exception;
+	}
+}

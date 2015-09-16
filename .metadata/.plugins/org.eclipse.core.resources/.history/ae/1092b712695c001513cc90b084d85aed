@@ -1,0 +1,27 @@
+package fjwa;
+
+public enum TableData {
+	contact_information("contact_information",""
+			+ "id unique int PRIMARY KEY,"
+			+ "name varchar(255),"
+			+ "email varchar(255)"
+			);
+	private final String name, creationSrc;
+	
+	private TableData(String name, String creationSrc) {
+		this.name = name;
+		this.creationSrc = creationSrc;
+	}
+	
+	public String toString() {
+		return name;
+	}
+	
+	public String createTableSrc() {
+		CREATE TABLE contact_information (
+				id unique int PRIMARY KEY,
+				name varchar(255),
+				email varchar(255)
+				);
+	}
+}

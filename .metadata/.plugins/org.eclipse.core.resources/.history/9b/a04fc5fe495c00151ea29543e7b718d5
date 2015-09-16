@@ -1,0 +1,28 @@
+package click.rmx.tests;
+
+
+public class Tests {
+	static int colWidth = 40;
+	public static void todo() {
+		note(null);
+	}
+	
+	public static void note(String s) {
+		if (s == null) {
+			s = "not yet implemented";
+		}
+		StackTraceElement trace = Thread.currentThread().getStackTrace()[2];
+		String file = trace.getFileName();
+		if (file.endsWith(".java"))
+			file = file.substring(0, file.length() - 5);
+		String method = trace.getMethodName();
+		String log = file + "::" + method + "() ";
+		if (log.length() < colWidth) {
+			int diff = colWidth - log.length();
+			for (int i = 0; i<diff; ++i)
+				log += ' ';
+		}
+		log += "=> " + s;			
+		System.out.println(log);
+	}
+}

@@ -1,0 +1,5 @@
+CREATE TABLE contact_information (
+id int(64) PRIMARY KEY unique,
+name varchar(32),
+email varchar(50)
+)

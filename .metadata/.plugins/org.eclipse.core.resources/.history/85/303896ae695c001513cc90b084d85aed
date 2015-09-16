@@ -1,0 +1,5 @@
+package fjwa;
+
+public class FJWAException extends Exception {
+
+}

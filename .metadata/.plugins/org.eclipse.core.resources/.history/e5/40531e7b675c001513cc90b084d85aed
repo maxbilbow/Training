@@ -1,0 +1,6 @@
+CREATE TABLE contact_information (
+id integer PRIMARY KEY,
+name varchar,
+column3 DATE_TYPE3,
+column4 DATE_TYPE4
+)

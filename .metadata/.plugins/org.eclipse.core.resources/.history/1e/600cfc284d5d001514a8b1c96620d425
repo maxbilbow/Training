@@ -1,0 +1,37 @@
+package fjwa.service;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import fjwa.model.Activity;
+import fjwa.model.Bomb;
+
+@Service("bombService")
+public class BombServiceImpl implements BombService {
+
+	private static List<Bomb> bombs = new ArrayList<Bomb>();
+	public List<Bomb> findAllBombs() {
+//		List<Bomb> bombs = Arrays.asList(
+//				new Bomb(),
+//				new Bomb(),
+//				new Bomb(),
+//				new Bomb()
+//				);
+		
+		
+		
+		return bombs;
+	}
+	
+	public void addBomb() {
+		bombs.add(new Bomb());
+	}
+
+	public void defuse() {
+		bombs.clear();
+	}
+
+}

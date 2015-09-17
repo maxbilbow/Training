@@ -3,6 +3,7 @@ import static org.hamcrest.CoreMatchers.allOf;
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
+import static practice.db.WebInterface.*;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,10 +15,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import fjwa.FJWAException;
-import fjwa.TableData;
-import fjwa.WebInterface;
-import static fjwa.WebInterface.*;
+import practice.db.FJWAException;
+import practice.db.TableData;
+import practice.db.WebInterface;
+
 import static fjwa.tests.Tests.*;
 /**
  * 

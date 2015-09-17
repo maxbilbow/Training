@@ -1,0 +1,6 @@
+
+package fjwa.practice;
+
+public interface IDatabaseReader {
+	public boolean connect();
+}

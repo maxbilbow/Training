@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>.org.eclipse.jdt.core.external.folders</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.link0</name>
+			<type>2</type>
+			<location>C:/ide/sts-bundle/sts-3.7.0.RELEASE/plugins/org.springsource.ide.eclipse.commons.gettingstarted_3.7.0.201506251212-RELEASE</location>
+		</link>
+	</linkedResources>
+</projectDescription>

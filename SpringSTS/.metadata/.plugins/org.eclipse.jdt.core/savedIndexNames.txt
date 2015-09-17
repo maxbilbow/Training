@@ -1,0 +1,22 @@
+INDEX VERSION 1.127+C:\Users\bilbowm\workspace\SpringSTS\.metadata\.plugins\org.eclipse.jdt.core
+1166657294.index
+1886297679.index
+109959148.index
+3350538983.index
+2430471093.index
+1433444152.index
+1470924421.index
+2552291292.index
+734089071.index
+1523558062.index
+1352375794.index
+3806266981.index
+2285274180.index
+2581954682.index
+967380190.index
+3367218878.index
+1136353447.index
+3877363970.index
+3250449269.index
+501573084.index
+3954081372.index

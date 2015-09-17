@@ -1,0 +1,62 @@
+package fjwa.model;
+
+
+import java.lang.ref.WeakReference;
+import java.time.Duration;
+import java.time.Instant;
+import java.util.ArrayList;
+
+import org.hibernate.validator.constraints.Range;
+
+import fjwa.controller.StrongBomb;
+
+public class WeakBomb extends WeakReference<StrongBomb> implements Bomb {
+
+	private WeakBomb() {
+		super(new StrongBomb());
+
+	}
+
+	@Override
+	public boolean isLive() {
+		return get() != null && get().isLive();
+	}
+
+	@Override
+	public void setLive(boolean live) {
+		get().setLive(live);
+	}
+
+	@Override
+	public int getTimeinSeconds() {
+		// TODO Auto-generated method stub
+		return get().getTimeinSeconds();
+	}
+
+	@Override
+	public void setTimeinSeconds(int timeinSeconds) {
+		get().setTimeinSeconds(timeinSeconds);
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return get().getName();
+	}
+
+	@Override
+	public boolean hasTimeRunOut() {
+		return get() == null || get().hasTimeRunOut();
+	}
+	
+	
+	@Override
+	public boolean isNull() {
+		return get() == null;
+	}
+	
+	public static StrongBomb newInstance() {
+		return new WeakBomb();
+	}
+
+}

@@ -1,6 +1,0 @@
-
-package fjwa.database;
-
-public interface DatabaseReader {
-	public boolean connect();
-}

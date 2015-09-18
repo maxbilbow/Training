@@ -1,5 +1,0 @@
-CREATE TABLE contact_information (
-id unique int PRIMARY KEY unique,
-name varchar(32),
-email varchar(50)
-)

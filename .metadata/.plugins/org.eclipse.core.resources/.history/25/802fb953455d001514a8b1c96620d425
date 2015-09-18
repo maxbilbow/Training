@@ -1,7 +1,0 @@
-package fjwa.service;
-
-import java.util.List;
-
-public interface BombService {
-	List<Bomb> bombs getBombs();
-}

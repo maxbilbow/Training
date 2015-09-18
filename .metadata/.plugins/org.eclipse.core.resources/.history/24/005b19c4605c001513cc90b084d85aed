@@ -1,6 +1,0 @@
-
-package bilbowm.database;
-
-public interface DatabaseReader {
-
-}

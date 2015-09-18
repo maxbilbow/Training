@@ -13,6 +13,7 @@ public class GoalServiceImpl implements GoalService {
 	@Autowired
 	private GoalRepository goalRepository;
 	
+	@Override
 	public Goal save(Goal goal) {
 		// TODO Auto-generated method stub
 		return goalRepository.save(goal);

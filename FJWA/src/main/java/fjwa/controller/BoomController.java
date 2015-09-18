@@ -27,7 +27,6 @@ import fjwa.model.Goal;
 import fjwa.model.Bomb;
 import fjwa.service.BombService;
 
-
 @Controller
 @SessionAttributes("bomb")
 public class BoomController {

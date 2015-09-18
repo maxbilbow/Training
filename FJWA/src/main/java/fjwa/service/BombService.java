@@ -8,7 +8,6 @@ public interface BombService {
 	List<Bomb> findAllBombs();
 	void addBomb();
 	void defuse();
-	void update();
-	void cleanUp();
-	
+	List<Bomb> update();
+	void cleanUp();	
 }

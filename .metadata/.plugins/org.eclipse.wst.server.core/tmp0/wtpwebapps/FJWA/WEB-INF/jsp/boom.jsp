@@ -33,8 +33,11 @@
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <style>
     </style>
+    
+    <script src="assets/js/gl.js"></script>
+    
   </head>
-  <body>
+  <body  onload="glrun('triangles',true);updateBombs()">
     <div class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
@@ -47,13 +50,13 @@
       </div>
     </div>
     <div class="container">
-      <div class="hero-unit">
-        <div>
+      <div id="left_panel" class="hero-unit"  style="float: left; display: inline;">
+   
           
 <h1>${boom}</h1>
-
-        </div>
-        <a class="btn btn-primary" href="addBomb.html">
+<div>
+        
+        <a class="btn btn-primary" href="addBomb.html"  onclick="updateBombs()">
           Add Bomb
         </a>
         
@@ -64,14 +67,69 @@
          <a class="btn btn-primary" href="cleanUp.html">
           Collect Garbage
         </a>
-        <p>${bombs}</p>
+        
+        <!--  - <a class="btn btn-primary" href="#" onclick="updateBombs()">
+          Update
+        </a> -->
+        <p id="update_test">${bombs}</p>
       </div>
-      <div>
+   </div>
+   
+      <div style="float: left; display: inline;">
+       <canvas id="gl">
+            
+        </canvas>
+        <br/>
+<form id="myForm">
+<button type="button" onclick="glrun('triangles',false)">GL_TRIANGLES</button>
+<button type="button" onclick="glrun('wireframe',false)">GL_LINE_STRIP</button>
+<button type="button" onclick="glrun('points',false)">GL_POINTS</button>
+<button type="button" onclick="toggleBackground()">Background</button>
+<button type="button" onclick="showLog()">See Log</button>
+</form>
+   
       </div>
-    </div>
+     
+
+</div>
     
-    <script src="jquery-1.8.3.js">
+    <script>
+    function updateBombs() {
+    	//alert("Update");//.setAttribute("update_test", "updated");
+  
+  
+		$(document).ready(
+			function() {
+				$.getJSON('<spring:url value="updateBombs.json"/>', {
+					ajax : 'true'
+				}, function(data){
+					var html = '';
+					var len = data.length;
+					for (var i = 0; i < len; i++) {
+						var time = data[i]['timeInSeconds'];
+						time = time < 0 ? '<span style="color: red;">BOOM!</span>' :  time + ' seconds!';
+						html += '<br/>Bomb ' + data[i]['name'] + ': ' + time;
+					}
+					
+					
+					$('p#update_test').html(html);
+				});
+				
+			});
+		 window.requestAnimationFrame(updateBombs);
+    }
+    
+    
+		
+	</script>
+    	
+    	
+   
+  
+    <script src="jquery.js">
     </script>
+     <script src="http://malsup.github.com/jquery.form.js"></script> 
+    
     
     <script src="assets/js/bootstrap.js">
     </script>

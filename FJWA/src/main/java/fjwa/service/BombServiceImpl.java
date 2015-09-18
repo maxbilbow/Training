@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import fjwa.controller.BoomController;
 import fjwa.model.Activity;
 import fjwa.model.Bomb;
 import fjwa.model.Bomb;
@@ -16,16 +17,13 @@ import fjwa.model.WeakBomb;
 @Service("bombService")
 public class BombServiceImpl implements BombService {
 
-	private static List<Bomb> bombs = new ArrayList<Bomb>();
+	private final List<Bomb> bombs;
+	
+	public BombServiceImpl() {
+		this.bombs = new ArrayList<Bomb>();
+	}
+	
 	public List<Bomb> findAllBombs() {
-//		List<Bomb> bombs = Arrays.asList(
-//				new Bomb(),
-//				new Bomb(),
-//				new Bomb(),
-//				new Bomb()
-//				);
-		
-		
 		
 		return bombs;
 	}
@@ -42,15 +40,17 @@ public class BombServiceImpl implements BombService {
 		System.gc();
 	}
 	
-	public void update() {
-//		int i = 0;
+	public List<Bomb> update() {
 		for (int i = 0; i < bombs.size(); ++i) {
 			if (bombs.get(i).hasTimeRunOut()) {
-				System.out.println("B" + i + " Expired.");
+//				System.out.println("B" + i + " Expired.");
 				if (bombs.get(i).isNull())
 					bombs.remove(i--);
 			}
 		}
+		return bombs;
 	}
+	
+	
 
 }

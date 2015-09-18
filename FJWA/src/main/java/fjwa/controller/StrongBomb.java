@@ -10,14 +10,14 @@ public class StrongBomb implements Bomb {
 	private boolean live = true;
 
 	@Range(min = 1)
-	private int timeinSeconds;
-
+	private int timeInSeconds;
+	private final int startTimeInSeconds;
 	private String name;
 	private static int count = 0;
 	
 	private final Instant startTime;
 	public StrongBomb() {
-		this.timeinSeconds = (int) (Math.random() * 20 + 5);
+		this.timeInSeconds = this.startTimeInSeconds = (int) (Math.random() * 20 + 5);
 		this.name = "B" + ++count;
 		this.startTime = Instant.now();
 	}
@@ -42,16 +42,16 @@ public class StrongBomb implements Bomb {
 	 * @see fjwa.model.IBomb#getTimeinSeconds()
 	 */
 	@Override
-	public int getTimeinSeconds() {
-		return timeinSeconds;
+	public int getTimeInSeconds() {
+		return timeInSeconds;
 	}
 
 	/* (non-Javadoc)
 	 * @see fjwa.model.IBomb#setTimeinSeconds(int)
 	 */
 	@Override
-	public void setTimeinSeconds(int timeinSeconds) {
-		this.timeinSeconds = timeinSeconds;
+	public void setTimeinSeconds(int timeInSeconds) {
+		this.timeInSeconds = timeInSeconds;
 	}
 
 	/* (non-Javadoc)
@@ -71,9 +71,9 @@ public class StrongBomb implements Bomb {
 		Instant now = Instant.now();
 		
 		Duration dt = Duration.between(this.startTime, now);
-		this.timeinSeconds -= dt.getSeconds();
+		this.timeInSeconds = (int) (this.startTimeInSeconds - dt.getSeconds());
 	
-		return this.timeinSeconds < 0;
+		return this.timeInSeconds < 0;
 	}
 	
 	@Override

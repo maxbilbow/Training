@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.function.Consumer"/>
-<fullyQualifiedTypeName name="javax.script.ScriptEngineManager"/>
-<fullyQualifiedTypeName name="javax.script.ScriptEngine"/>
-<fullyQualifiedTypeName name="javafx.stage.Stage"/>
-<fullyQualifiedTypeName name="javafx.beans.binding.Bindings"/>
-<fullyQualifiedTypeName name="javax.script.Bindings"/>
 <fullyQualifiedTypeName name="java.nio.file.Files"/>
 <fullyQualifiedTypeName name="java.nio.file.Path"/>
 <fullyQualifiedTypeName name="java.util.stream.Stream"/>
@@ -60,4 +54,10 @@
 <fullyQualifiedTypeName name="fjwa.controller.StrongBomb"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="fjwa.model.WeakBomb"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="fjwa.controller.MyResponseBody"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseStatus"/>
+<fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+<fullyQualifiedTypeName name="fjwa.controller.BoomController"/>
 </qualifiedTypeNameHistroy>

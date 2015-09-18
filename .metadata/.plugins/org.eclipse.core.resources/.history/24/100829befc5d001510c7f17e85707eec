@@ -1,0 +1,5 @@
+package fjwa.controller;
+
+public @interface MyResponseBody {
+
+}

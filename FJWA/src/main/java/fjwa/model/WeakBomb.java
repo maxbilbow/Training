@@ -28,9 +28,9 @@ public class WeakBomb extends WeakReference<StrongBomb> implements Bomb {
 	}
 
 	@Override
-	public int getTimeinSeconds() {
+	public int getTimeInSeconds() {
 		// TODO Auto-generated method stub
-		return get().getTimeinSeconds();
+		return get().getTimeInSeconds();
 	}
 
 	@Override

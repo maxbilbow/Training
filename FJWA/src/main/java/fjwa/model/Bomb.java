@@ -15,7 +15,7 @@ public interface Bomb {
 	/**
 	 * @return the timeinSeconds
 	 */
-	int getTimeinSeconds();
+	int getTimeInSeconds();
 
 	/**
 	 * @param timeinSeconds the timeinSeconds to set

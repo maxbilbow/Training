@@ -1,0 +1,27 @@
+package fjwa.model;
+
+
+import javax.persistence.GeneratedValue;
+
+import org.hibernate.validator.constraints.Range;
+
+
+@Entity
+public class Goal {
+
+	@Id
+	@GeneratedValue
+	private long id;
+	
+	@Range(min = 1, max = 120)
+	private int minutes;
+
+	public int getMinutes() {
+		return minutes;
+	}
+
+	public void setMinutes(int minutes) {
+		this.minutes = minutes;
+	}
+	
+}

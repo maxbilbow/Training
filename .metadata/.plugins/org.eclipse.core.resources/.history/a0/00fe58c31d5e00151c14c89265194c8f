@@ -1,0 +1,114 @@
+package fjwa.model;
+import java.time.Duration;
+import java.time.Instant;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import org.hibernate.validator.constraints.Range;
+
+//@Entity
+public class Bomb implements IBomb {
+	private static long count = 0;
+
+	
+	private boolean live = true;
+	private int timeInSeconds;
+	
+
+	private final int startTimeInSeconds;
+	private String name;
+	
+//	@Id
+//	@GeneratedValue
+	private long id;
+	
+	
+	private final Instant startTime;
+//	public Bomb(Long id) {
+//		this.timeInSeconds = this.startTimeInSeconds = (int) (Math.random() * 20 + 5);
+//		this.name = "B" + (this.id = id == null ? ++count : id);
+//		this.startTime = Instant.now();
+//	}
+//	
+	@Override
+	protected void finalize() throws Throwable {
+		System.out.println(getName() + " Was DELETED by the GC!");
+		super.finalize();
+	}
+
+	public Bomb get() {
+		return this;
+	}
+
+	@Override
+	public long getId() {
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see fjwa.model.IBomb#getName()
+	 */
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return this.name;
+	}
+
+	/* (non-Javadoc)
+	 * @see fjwa.model.IBomb#getTimeinSeconds()
+	 */
+	@Override
+	public int getTimeInSeconds() {
+		return timeInSeconds;
+	}
+	
+	/* (non-Javadoc)
+	 * @see fjwa.model.IBomb#hasTimeRunOut()
+	 */
+	@Override
+	public boolean hasTimeRunOut() {
+		Instant now = Instant.now();
+		
+		Duration dt = Duration.between(this.startTime, now);
+		this.timeInSeconds = (int) (this.startTimeInSeconds - dt.getSeconds());
+	
+		return this.timeInSeconds < 0;
+	}
+	
+	/* (non-Javadoc)
+	 * @see fjwa.model.IBomb#isLive()
+	 */
+	@Override
+	public boolean isLive() {
+		return live;
+	}
+	
+	public boolean isNull() {
+		return false;
+	}
+	
+	@Override
+	public long setId(long id) {
+		return this.id = id;
+	}
+
+	/* (non-Javadoc)
+	 * @see fjwa.model.IBomb#setLive(boolean)
+	 */
+	@Override
+	public void setLive(boolean live) {
+		this.live = live;
+	}
+
+	/* (non-Javadoc)
+	 * @see fjwa.model.IBomb#setTimeinSeconds(int)
+	 */
+	@Override
+	public void setTimeinSeconds(int timeInSeconds) {
+		this.timeInSeconds = timeInSeconds;
+	}
+
+
+}

@@ -24,12 +24,14 @@ import org.springframework.web.servlet.ModelAndView;
 import fjwa.model.Bomb;
 import fjwa.model.Exercise;
 import fjwa.model.Goal;
+import fjwa.model.WeakBomb;
 import fjwa.model.Bomb;
 import fjwa.service.BombService;
 
 @Controller
 @SessionAttributes("bomb")
 public class BoomController {
+	
 	@Autowired
 	private BombService bombService;
 	
@@ -40,11 +42,19 @@ public class BoomController {
 		return "boom"; //The jsp name?
 	}
 
-
-	
 	@RequestMapping(value = "addBomb", method = RequestMethod.GET)
 	public String addBomb(Model model){
-		bombService.addBomb();
+		Bomb bomb = WeakBomb.newInstance();
+		bombService.addBomb(bomb);
+		
+		return "redirect:boom.html";
+	}
+	
+	
+	@RequestMapping(value = "updateBomb", method = RequestMethod.GET)
+	public String updateBomb(@Valid @ModelAttribute("bomb") Bomb bomb, Model model){
+//		bombService.addBomb(bomb);s
+		System.out.println("updateBomb??!");
 		return "redirect:boom.html";
 	}
 	
@@ -104,8 +114,7 @@ public class BoomController {
 
 			String result = "";
 			for (Bomb bomb : bombs) {
-				int time = bomb.getTimeInSeconds();
-				result += "<br/> " + (time < 0 ? "Boom!" :  "Bomb " + bomb.getName() + ": " + time + " seconds!" );
+				result += "<br/> " + (bomb.hasTimeRunOut() ? "Boom!" :  "Bomb " + bomb.getName() + ": " + bomb.timeRemaining() + " seconds!" );
 			}
 			
 			model.addAttribute("bombs", result);

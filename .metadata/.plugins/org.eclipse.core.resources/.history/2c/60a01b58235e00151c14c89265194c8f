@@ -1,0 +1,66 @@
+package fjwa.service;
+
+
+import java.util.ArrayList;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+
+import fjwa.model.Bomb;
+import fjwa.model.StrongBomb;
+import fjwa.model.WeakBomb;
+
+
+@Service("bombService")
+public class BombServiceImpl implements BombService {
+
+	private final List<Bomb> bombs;
+	
+	public BombServiceImpl() {
+		this.bombs = new ArrayList<Bomb>();
+	}
+	
+	public List<Bomb> findAllBombs() {
+		
+		return bombs;
+	}
+	
+	public void addBomb() {
+		bombs.add(newInstance());
+	}
+
+	private static Bomb newInstance() {
+		// TODO Auto-generated method stub
+		return WeakBomb.newInstance();
+	}
+
+	public void defuse() {
+		bombs.clear();
+	}
+
+	public void cleanUp() {
+		System.gc();
+	}
+	
+	public List<Bomb> update() {
+		for (int i = 0; i < bombs.size(); ++i) {
+			if (bombs.get(i).hasTimeRunOut()) {
+//				System.out.println("B" + i + " Expired.");
+				if (bombs.get(i).isNull())
+					bombs.remove(i--);
+			}
+		}
+		return bombs;
+	}
+
+	@Override
+	public Bomb save(Bomb bomb) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}

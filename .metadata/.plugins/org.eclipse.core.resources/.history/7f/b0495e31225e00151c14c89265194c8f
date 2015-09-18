@@ -1,0 +1,7 @@
+package fjwa.service;
+
+public interface GoalService {
+	
+	Goal save(Goal goal);
+	
+}

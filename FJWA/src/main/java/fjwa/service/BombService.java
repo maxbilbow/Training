@@ -6,8 +6,10 @@ import fjwa.model.Bomb;
 
 public interface BombService {
 	List<Bomb> findAllBombs();
-	void addBomb();
+	void addBomb(Bomb bomb);
 	void defuse();
 	List<Bomb> update();
 	void cleanUp();	
+	
+	Bomb save(Bomb bomb);
 }

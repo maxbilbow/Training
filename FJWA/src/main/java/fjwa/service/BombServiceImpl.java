@@ -1,23 +1,26 @@
 package fjwa.service;
 
-import java.time.Duration;
-import java.time.Instant;
+
 import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import fjwa.controller.BoomController;
-import fjwa.model.Activity;
-import fjwa.model.Bomb;
+
 import fjwa.model.Bomb;
 import fjwa.model.WeakBomb;
+import fjwa.repository.BombRepository;
+
 
 @Service("bombService")
 public class BombServiceImpl implements BombService {
 
 	private final List<Bomb> bombs;
+	
+	@Autowired
+	private BombRepository bombRepository;
 	
 	public BombServiceImpl() {
 		this.bombs = new ArrayList<Bomb>();
@@ -28,9 +31,11 @@ public class BombServiceImpl implements BombService {
 		return bombs;
 	}
 	
-	public void addBomb() {
-		bombs.add(WeakBomb.newInstance());
+	public void addBomb(Bomb bomb) {
+		bombs.add(bomb);//WeakBomb.newInstance());
 	}
+
+
 
 	public void defuse() {
 		bombs.clear();
@@ -49,6 +54,11 @@ public class BombServiceImpl implements BombService {
 			}
 		}
 		return bombs;
+	}
+
+	@Override
+	public Bomb save(Bomb bomb) {
+		return bombRepository.save(bomb);
 	}
 	
 	

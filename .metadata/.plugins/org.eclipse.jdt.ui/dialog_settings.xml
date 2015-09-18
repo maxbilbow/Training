@@ -5,6 +5,7 @@
 	<item value="true" key="Comments"/>
 	<item value="C:\Users\bilbowm\workspace\Resources" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="false" key="InstanceOf"/>
+	<item value="false" key="SortMembers.sort_all"/>
 	<item value="false" key="delegateUpdating"/>
 	<item value="C:\Users\bilbowm\workspace\spring-boot-starter-parent\src\test" key="org.eclipse.jdt.ui.last.external.project"/>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
@@ -99,7 +100,7 @@
 		<item value="355" key="size.x"/>
 	</section>
 	<section name="BuildPathsPropertyPage">
-		<item value="3" key="pageIndex"/>
+		<item value="2" key="pageIndex"/>
 	</section>
 	<section name="NewPackageWizardPage">
 		<item value="true" key="create_package_info_java"/>

@@ -1,0 +1,13 @@
+package fjwa.repository;
+
+import fjwa.model.Bomb;
+
+public class BombRepositoryImpl implements BombRepository {
+
+	@Override
+	public Bomb save(Bomb bomb) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

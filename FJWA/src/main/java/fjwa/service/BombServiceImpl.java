@@ -56,7 +56,7 @@ public class BombServiceImpl implements BombService {
 		return bombs;
 	}
 
-	@Override
+
 	public Bomb save(Bomb bomb) {
 		return bombRepository.save(bomb);
 	}

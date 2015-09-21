@@ -8,6 +8,7 @@
 
 	
 	<context:annotation-config />
+	<context:component-scan base-package="fjwa" />
 	
 	<bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
 	

@@ -1,0 +1,6 @@
+1442827540420	Rename field 'toRemove'
+1442827738048	Delete element
+1442833175422	Rename type 'Bomb'
+1442833197395	Rename type 'StrongBomb'
+1442843481831	Rename method 'diffuse'
+1442850509807	Encapsulate field 'goal'

@@ -1,0 +1,21 @@
+package fjwa.service;
+
+import java.util.List;
+
+import fjwa.model.BombInterface;
+
+public interface BombService {
+	List<BombInterface> findAllBombs();
+	BombService addBomb(BombInterface bomb);
+	BombService addBomb();
+	void defuse();
+	List<BombInterface> update();
+	void cleanUp();	
+	
+	BombInterface save(BombInterface bomb);
+	BombInterface save();
+	BombInterface remove(BombInterface bomb);
+	BombInterface remove(long id);
+//	void removeExpired();
+	
+}

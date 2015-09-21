@@ -1,0 +1,7 @@
+package fjwa.model;
+
+public class Bombs {
+	static Bomb newBomb() {
+		return new StrongBomb();
+	}
+}

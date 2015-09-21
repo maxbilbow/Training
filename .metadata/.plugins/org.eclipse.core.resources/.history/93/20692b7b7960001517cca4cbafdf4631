@@ -1,0 +1,18 @@
+package fjwa.repository;
+
+import javax.persistence.PersistenceContext;
+
+import fjwa.model.Exercise;
+
+public class ExerciseRepositoryImpl implements ExerciseRepository {
+
+	@PersistenceContext
+	EntityManager em;
+	
+	@Override
+	public Exercise save(Exercise entity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

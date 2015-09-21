@@ -15,9 +15,8 @@ public class GoalRepositoryImpl implements GoalRepository {
 	
 	@Override
 	public Goal save(Goal goal) {
-
 		em.persist(goal);
-		
+		em.flush();
 		return goal;
 	}
 

@@ -61,7 +61,7 @@
         </a>
         
         <a class="btn btn-primary" href="defuse.html">
-          Defuse!
+          defuse!
         </a>
         
          <a class="btn btn-primary" href="cleanUp.html">
@@ -71,7 +71,9 @@
         <!--  - <a class="btn btn-primary" href="#" onclick="updateBombs()">
           Update
         </a> -->
+       <p id="error_log">${errors}</p>
         <p id="update_test">${bombs}</p>
+         
       </div>
    </div>
    
@@ -106,9 +108,7 @@
 					var html = '';
 					var len = data.length;
 					for (var i = 0; i < len; i++) {
-						var time = data[i]['timeInSeconds'];
-						time = time < 0 ? '<span style="color: red;">BOOM!</span>' :  time + ' seconds!';
-						html += '<br/>Bomb ' + data[i]['name'] + ': ' + time;
+						html += '<br/>' + data[i].description;//.toString
 					}
 					
 					

@@ -1,0 +1,18 @@
+package fjwa.repository;
+
+import java.util.List;
+
+import fjwa.model.Bomb;
+
+public interface BombRepository {
+	
+	Bomb save(Bomb bomb);
+
+	Bomb remove(Bomb bomb);
+
+	Bomb getBomb(long id);
+
+	List<Bomb> getBombList();
+
+	
+}

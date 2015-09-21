@@ -1,0 +1,35 @@
+package fjwa;
+
+public enum RMXError {
+	/**
+	 * Nothing to worry about
+	 */
+	 MethodNotImplementedException("blue"), 
+	 
+	 /**
+	  * These need to be fixed but are expected
+	  */
+	 Expected("orange"),
+	 
+	 
+	 /**
+	  * We were not expecting this!
+	  */
+	 Unexpected("red");
+//	 /**
+//	  * Undefined error type
+//	  */
+//	 Default("red");
+	
+	private final String color;
+	
+	private RMXError(String color){
+		this.color = color;
+	}
+	
+	public String html() {
+		return "<span style=\"color: " + color + ";\">" + toString() + "</span>";
+	}
+	
+	
+}

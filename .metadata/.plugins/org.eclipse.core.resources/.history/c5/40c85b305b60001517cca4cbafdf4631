@@ -1,0 +1,25 @@
+package fjwa.service;
+
+import java.util.List;
+
+import fjwa.RMXException;
+import fjwa.model.Bomb;
+
+public interface BombService {
+	List<Bomb> findAllBombs();
+	BombService addBomb(Bomb bomb);
+	BombService addBomb();
+	void diffuse();
+	List<Bomb> update();
+	void cleanUp() throws RMXException;	
+	
+	Bomb save(Bomb bomb) throws RMXException;
+	Bomb save() throws RMXException;
+	Bomb remove(Bomb bomb) throws RMXException;
+	Bomb remove(long id);
+	
+	@Deprecated
+	void removeExpired();
+	String getErrors();
+	
+}

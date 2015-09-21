@@ -1,0 +1,17 @@
+package fjwa;
+
+public enum RMXError {
+	/**
+	 * Nothing to worry about
+	 */
+	 MethodNotImplementedException, 
+	 
+	 /**
+	  * Undefined error type
+	  */
+	 Default;
+	
+	public String toString() {
+		return this.getClass() + "." + super.toString();
+	};
+}

@@ -1,0 +1,13 @@
+package fjwa.repository;
+
+import fjwa.model.Exercise;
+
+public class ExerciseRepositoryImpl implements ExerciseRepository {
+
+	@Override
+	public Exercise save(Exercise entity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,96 @@
+package fjwa;
+
+public class RMXException extends Exception {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4545896278223910564L;
+	private final RMXError type;
+	private final String log;
+	private final String reportLocation;
+	private RMXException(String log, RMXError type, String reportLocation) {
+		super();
+		this.originalException = this;
+		this.type = type;
+		this.reportLocation = reportLocation;
+	}
+
+	private RMXException(RMXError type,  String location) {
+		super(type.toString());
+		this.originalException = this;
+		this.type = type;
+		this.reportLocation = location;
+	}
+
+	private final Exception originalException;
+	
+	public static RMXException unexpected(Exception e) {
+		return new RMXException(e, RMXError.Unexpected, getLocation(1));
+	}
+	
+	public static RMXException expected(Exception e) {
+		return new RMXException(e, RMXError.Expected, getLocation(1));
+	}
+	
+	private static String getLocation(int depth) {
+		StackTraceElement trace = Thread.currentThread().getStackTrace()[depth + 2];
+		return "\nREPORTED >> " + trace.getClassName() + "::" + trace.getMethodName();
+	}
+
+	public static RMXException unexpected(String message) {
+		return new RMXException(message, RMXError.Unexpected, getLocation(1));
+	}
+	
+	private RMXException(Exception e, RMXError type, String r) {
+		super();
+		this.type = type;
+		this.originalException = e;//.getStackTrace();
+		this.reportLocation = r;
+	}
+
+	public String errorLog() {
+		return this.reportLocation + " >> " + this.log + "\n" + super.toString();
+	}
+
+	@Override
+	public String getLocalizedMessage() {
+		return originalException == this ? errorLog() : this.reportLocation + originalException.getLocalizedMessage();
+	}
+	
+	public String html() {
+		return this.type.html() + " >> " + this.errorLog().replace("\n", "<br/>");
+	}
+
+	public void addLog(String log) {
+		this.log += "\n" + log;
+	}
+
+	@Override
+	public void printStackTrace() {
+		System.err.print( type + ": An RMXException has occurred >> ");
+		switch (type) {
+		case MethodNotImplementedException:
+			System.out.println(this.getLocalizedMessage());
+			break;
+		case Expected:
+			System.out.println("Expected but should be managed: ");
+			System.out.println(this.getLocalizedMessage());
+			break;
+		case Unexpected:
+			System.err.println("UNEXPECTED ERROR!");
+			if (originalException == this)
+				super.printStackTrace();
+			else 
+				this.originalException.printStackTrace();
+			break;
+		}
+	}
+
+	public boolean isSerious() {
+		return this.type.isSerious();
+	}
+
+	public static RMXException newInstance(RMXError type) {
+		return new RMXException(type, getLocation(1));
+	}
+}

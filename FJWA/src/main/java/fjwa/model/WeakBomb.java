@@ -4,19 +4,26 @@ package fjwa.model;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
-import fjwa.model.StrongBomb;
-import fjwa.model.Bomb;
+import java.util.Collection;
+import java.util.HashSet;
 
+import fjwa.model.BombInterface;
 
-public class WeakBomb extends WeakReference<StrongBomb> implements Bomb {
-	static ArrayList<StrongBomb> safeList  = new ArrayList<>();
-	public static Bomb newInstance() {
-		return new WeakBomb();
+@Deprecated
+public class WeakBomb extends WeakReference<BombInterface> implements BombInterface {
+	static ArrayList<BombInterface> safeList  = new ArrayList<>();
+	public static Collection<Long> expired = new HashSet<>();
+	
+	public static BombInterface newInstance(BombInterface bomb) {
+		return new WeakBomb(bomb);
 	}
 
-	public WeakBomb() {
-		super(new StrongBomb());
-		safeList.add(get());
+	
+
+	public WeakBomb(BombInterface bomb) {
+		super(bomb);
+		bomb.setWeak(true);
+		safeList.add(bomb);
 	}
 
 	@Override
@@ -71,5 +78,37 @@ public class WeakBomb extends WeakReference<StrongBomb> implements Bomb {
 	public int timeRemaining() {
 		// TODO Auto-generated method stub
 		return get().timeRemaining();
+	}
+	
+	@Override
+	public BombInterface strongReference() {
+		return this.get();
+	}
+	
+	@Override
+	public String toString() {
+		return get().toString();
+	}
+	
+	@Override
+	public String getDescription() {
+		return this.get().getDescription();
+	}
+
+	public static void clearSafe() {
+		safeList.clear();
+	}
+
+
+	@Override
+	public boolean isWeak() {
+		return true;
+	}
+
+	@Override
+	public BombInterface setWeak(boolean weak) {
+		if (weak)
+			return this;
+		return this.get().setWeak(weak);
 	}
 }

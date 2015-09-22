@@ -5,14 +5,24 @@ import java.time.Instant;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.Range;
 
 @Entity
 @Table(name = "bomb_table")
+@NamedQueries( {
+	@NamedQuery(
+			name=Bomb.FIND_ALL_BOMBS,
+			query="Select b from Bomb b"
+			)
+})
 public class Bomb {
-	
+	public static final String 
+	FIND_ALL_BOMBS = "findAllBombs", 
+	CLASS = "fjwa.model.Bomb";
 	@Id
 	@GeneratedValue
 	private long id;
@@ -29,8 +39,10 @@ public class Bomb {
 	
 	
 	
-	@Range(min = 1)
+	@Range(min = 0)
 	private int startTimeInSeconds;
+
+	private boolean outOfTime = false;
 	
 	
 	
@@ -49,7 +61,7 @@ public class Bomb {
 
 	public String getDescription() {
 		this.description = "Bomb " + this.getName() + ": ";
-		if (this.hasTimeRunOut())
+		if (this.isOutOfTime())
 			description += "<span style=\"color: red;\">BOOM!</span>";
 		else if (!live)
 			description += "<span style=\"color: green;\">Diffused with " + this.getStartTimeInSeconds() + " remaining.</span>";
@@ -76,12 +88,12 @@ public class Bomb {
 		return startTimeInSeconds;
 	}
 
-	public boolean hasTimeRunOut() {
-		return timeRemaining() < 0;
+	public boolean isOutOfTime() {
+		return this.outOfTime  = timeRemaining() < 0;
 	}	
 
 	public boolean isLive() {
-		return live && !this.hasTimeRunOut();
+		return live && !this.isOutOfTime();
 	}
 	
 	public long setId(long id) {
@@ -102,8 +114,6 @@ public class Bomb {
 		this.startTimeInSeconds = timeInSeconds > 0 ? timeInSeconds : 0;
 		this.startTime = Instant.now();
 	}
-
-
 	
 	public int timeRemaining() {
 		if (!live) {

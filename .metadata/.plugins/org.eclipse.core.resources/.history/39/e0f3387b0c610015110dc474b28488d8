@@ -1,0 +1,5 @@
+package fjwa.repository;
+
+public interface EntityRepository {
+
+}

@@ -8,16 +8,17 @@ import org.springframework.stereotype.Repository;
 import fjwa.model.Exercise;
 
 @Repository("exerciseRepository")
-public class ExerciseRepositoryImpl implements ExerciseRepository {
+public class ExerciseRepositoryImpl extends AbstractRepository<Exercise> {
 
-	@PersistenceContext
-	private EntityManager em;
-	
 	@Override
-	public Exercise save(Exercise entity) {
-		em.persist(entity);
-		em.flush();
-		return entity;
+	protected String FIND_ALL() {
+		return Exercise.FIND_ALL_EXERCISES;
 	}
+
+	@Override
+	protected Class<Exercise> CLASS() {
+		return Exercise.class;
+	}
+
 
 }

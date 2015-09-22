@@ -25,6 +25,13 @@ public class RMXException extends Exception {
 		return e;
 	}
 
+	public static RMXException unexpected(Exception e, String message) {
+		e.printStackTrace();
+		RMXException err = new RMXException(e, RMXError.Unexpected, getLocation(1));
+		err.addLog(message);
+		return err;
+	}
+	
 	public static RMXException unexpected(Exception e) {
 		e.printStackTrace();
 		return new RMXException(e, RMXError.Unexpected, getLocation(1));

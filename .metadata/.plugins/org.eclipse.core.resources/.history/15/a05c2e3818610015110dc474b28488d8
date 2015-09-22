@@ -1,0 +1,12 @@
+package fjwa.service;
+
+import org.springframework.stereotype.Service;
+import fjwa.model.Goal;
+
+@Service("goalService")
+public class GoalServiceImpl extends AbstractEntityService<Goal> implements GoalService {
+
+
+
+
+}

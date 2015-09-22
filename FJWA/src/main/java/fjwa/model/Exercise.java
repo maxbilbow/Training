@@ -5,12 +5,23 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Range;
 
 @Entity
+@NamedQueries( {
+	@NamedQuery(
+			name=Exercise.FIND_ALL_EXERCISES,
+			query="Select e from Exercise e"
+			)
+})
 public class Exercise {
+	public static final String 
+	FIND_ALL_EXERCISES = "findAllExercises",
+	CLASS = "fjwa.model.Exercise";
 	
 	@Id
 	@GeneratedValue

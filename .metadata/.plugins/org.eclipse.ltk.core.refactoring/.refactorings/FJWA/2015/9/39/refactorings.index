@@ -4,3 +4,15 @@
 1442833197395	Rename type 'StrongBomb'
 1442843481831	Rename method 'diffuse'
 1442850509807	Encapsulate field 'goal'
+1442911255322	Rename method 'findAllGoals'
+1442913718913	Rename method 'findAllBombs'
+1442918009306	Encapsulate field 'entities'
+1442919435606	Delete element
+1442919442648	Delete element
+1442919457480	Delete element
+1442929199281	Change method 'findAllEntities'
+1442932227014	Rename method 'hasTimeRunOut'
+1442939496058	Move compilation unit
+1442939564904	Delete element
+1442939973839	Delete element
+1442939978552	Delete element

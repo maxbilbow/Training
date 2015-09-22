@@ -3,7 +3,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>    
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-
+  <%@  taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +37,7 @@
     <script src="assets/js/gl.js"></script>
     
   </head>
-  <body  onload="glrun('triangles',true);updateBombs()">
+  <body  onload="startSession()">
     <div class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
@@ -56,39 +56,58 @@
 <h1>${boom}</h1>
 <div>
         
-        <a class="btn btn-primary" href="addBomb.html"  onclick="updateBombs()">
+        <a class="btn btn-primary" href="#" onclick="addBomb()">
           Add Bomb
         </a>
         
-        <a class="btn btn-primary" href="defuse.html">
+        <a class="btn btn-primary" href="#"  onclick="defuse()">
           defuse!
         </a>
-        
-         <a class="btn btn-primary" href="cleanUp.html">
-          Collect Garbage
+       
+        <a class="btn btn-primary" id="show_expired" href="#" onclick="toggleBombs(true)">
+          Hide Expired
         </a>
+         
+         <a class="btn btn-primary" href="#" onclick="removeAll()">
+          Remove All
+        </a>
+       
         
         <!--  - <a class="btn btn-primary" href="#" onclick="updateBombs()">
           Update
         </a> -->
        <p id="error_log">${errors}</p>
-        <p id="update_test">${bombs}</p>
-         
-      </div>
+       
+       <p id="update_test">${bombs}</p>
+<!-- 
+				<div>
+					<p id="bomb_list">c:forEach:
+							
+					<c:forEach items="${bombs}" var="bomb">
+						<br/>${bomb.description}
+					</c:forEach>				
+						
+					</p>
+					
+				</div>
+				-->
+
+			</div>
    </div>
    
       <div style="float: left; display: inline;">
        <canvas id="gl">
             
         </canvas>
-        <br/>
-<form id="myForm">
-<button type="button" onclick="glrun('triangles',false)">GL_TRIANGLES</button>
-<button type="button" onclick="glrun('wireframe',false)">GL_LINE_STRIP</button>
-<button type="button" onclick="glrun('points',false)">GL_POINTS</button>
-<button type="button" onclick="toggleBackground()">Background</button>
-<button type="button" onclick="showLog()">See Log</button>
-</form>
+        </div>
+
+<div style="float: left; display: block;">
+<a class="btn btn-primary" href="#" onclick="glrun('triangles',false)">GL_TRIANGLES</a>
+<a class="btn btn-primary" href="#" onclick="glrun('wireframe',false)">GL_LINE_STRIP</a>
+<a class="btn btn-primary" href="#" onclick="glrun('points',false)">GL_POINTS</a>
+<a class="btn btn-primary" href="#" onclick="toggleBackground()">Background</a>
+<a class="btn btn-primary" href="#" onclick="showLog()">See Log</a>
+
    
       </div>
      
@@ -96,28 +115,110 @@
 </div>
     
     <script>
-    function updateBombs() {
-    	//alert("Update");//.setAttribute("update_test", "updated");
-  
-  
-		$(document).ready(
-			function() {
-				$.getJSON('<spring:url value="updateBombs.json"/>', {
-					ajax : 'true'
-				}, function(data){
-					var html = '';
-					var len = data.length;
-					for (var i = 0; i < len; i++) {
-						html += '<br/>' + data[i].description;//.toString
-					}
-					
-					
-					$('p#update_test').html(html);
-				});
-				
-			});
-		 window.requestAnimationFrame(updateBombs);
+    
+    var fjwa;
+	function startSession() {
+		fjwa = {
+	    		bombs: null,
+	    		update: function(data) {
+	    	    	this.bombs = data;
+	    	    },
+	    	    showAll:false
+	    };
+		glrun('triangles',true);
+		loadData();
+		toggleBombs(false)
+		updateBombs();
+
+	}
+	
+    function loadData() {
+    	$.getJSON('<spring:url value="updateBombs.json"/>', {
+    				ajax : 'true'
+    				}, fjwa.update);
     }
+    
+    function defuse() {
+    	$.getJSON('<spring:url value="defuse.json"/>', {
+			ajax : 'true'
+			}, fjwa.update
+			);
+    }
+    
+    function addBomb() {
+    	$.getJSON('<spring:url value="addBomb.json"/>', {
+			ajax : 'true'
+			}, fjwa.update
+			);
+    }
+    
+    function removeAll() {
+    	$.getJSON('<spring:url value="removeAll.json"/>', {
+			ajax : 'true'
+			}, fjwa.update);
+    }
+    
+    function toggleBombs(toggle) {
+    	if (toggle)
+    		fjwa.showAll = !fjwa.showAll;
+		$(document).ready(function () {
+			$('a#show_expired').html(fjwa.showAll ? "Hide Expired" : "Show Expired");
+		});
+    }
+    
+    function updateBombs() {
+    	//updateClientSide();
+    	
+    	
+    	updateBombsFromServer();
+    	
+    	window.requestAnimationFrame(updateBombs);
+    	
+    }
+    
+    
+    function updateClientSide() {
+    	$(document).ready( function (){
+    		var html = 'CLIENT SIDE:';
+        	var data = fjwa.bombs;
+        	if (data != null) {
+    			var len = data.length;
+    			for (var i = 0; i < len; i++) {
+    				html += '<br/>' + data[i].description;//.toString
+    			}
+        	} else {
+        		html += "<br/>NULL";
+        	}
+    		$('p#bomb_list').html(html);
+    	});
+    }
+    
+    function updateBombsFromServer() {
+    	$(document).ready(
+    			function() {
+    				$.getJSON('<spring:url value="updateBombs.json"/>', {
+    					ajax : 'true'
+    				}, function(data){
+    					
+    					var html = 'SERVER SIDE:';
+    					if (data != null) {
+    						fjwa.bombs = data;
+    						var len = data.length;
+    						for (var i = 0; i < len; i++) {
+    							if (fjwa.showAll || ( data[i].live && !data[i].outOfTime ) )
+    								html += '<br/>' + data[i].description;//.toString
+    						}
+    					} else {
+    						html += "<br/>NULL";
+    					}
+    					
+    					
+    					$('p#update_test').html(html);
+    				});
+    				
+    			});
+    }
+    
     
     
 		

@@ -1,0 +1,15 @@
+package fjwa.service;
+
+
+import java.util.List;
+
+import fjwa.controller.GoalReport;
+import fjwa.model.Goal;
+
+
+public interface GoalService extends EntityService<Goal> {
+
+	List<GoalReport> findAllGoalReports();
+
+	
+}

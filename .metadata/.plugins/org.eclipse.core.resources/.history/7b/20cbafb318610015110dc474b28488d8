@@ -1,0 +1,8 @@
+package fjwa.repository;
+
+import fjwa.model.Goal;
+
+@Deprecated
+public interface GoalRepository extends EntityRepository<Goal> {
+
+}

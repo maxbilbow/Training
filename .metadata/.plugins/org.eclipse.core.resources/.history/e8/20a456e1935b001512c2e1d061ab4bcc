@@ -1,8 +1,0 @@
-package java8;
-
-
-public interface NewInterface {
-	default void SayHello() {
-		System.out.println("Hello, default method!");
-	}
-}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=FJWA/src\/main\/java&lt;fjwa.service{GoalService.java[GoalService" modifiers="513" timestamp="1442833424487"/>
-<typeInfo handle="=FJWA/src\/main\/java&lt;fjwa.repository{GoalRepository.java[GoalRepository" modifiers="513" timestamp="1442594463796"/>
-<typeInfo handle="=FJWA/src\/main\/java&lt;fjwa.repository{BombRepository.java[BombRepository" modifiers="513" timestamp="1442838023972"/>
+<typeInfo handle="=FJWA/src\/main\/java&lt;fjwa.service{GoalService.java[GoalService" modifiers="513" timestamp="1442938070544"/>
+<typeInfo handle="=FJWA/src\/main\/java&lt;fjwa.repository{EntityRepository.java[EntityRepository" modifiers="513" timestamp="1442937944017"/>
+<typeInfo handle="=FJWA/src\/main\/java&lt;fjwa.repository{AbstractRepository.java[AbstractRepository" modifiers="1025" timestamp="1442938965579"/>
 </typeInfoHistroy>

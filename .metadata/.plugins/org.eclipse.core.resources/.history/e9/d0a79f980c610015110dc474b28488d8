@@ -1,0 +1,11 @@
+package fjwa.repository;
+
+import java.util.Collection;
+
+
+
+public interface EntityRepository<E> {
+
+	Collection<E> loadAll();
+
+}

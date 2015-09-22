@@ -1,0 +1,66 @@
+package fjwa.service;
+
+
+import java.util.Collection;
+import java.util.HashSet;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import fjwa.RMXException;
+import fjwa.model.Bomb;
+import fjwa.repository.EntityRepository;
+
+
+@Service("bombService")
+public class BombServiceImpl extends AbstractEntityService<Bomb> implements BombService {
+
+	
+
+//	@Autowired
+//	private EntityRepository<Bomb> bombRepository;
+
+	@Override
+	public void defuse() {
+		for (Bomb bomb : getEntities())
+			bomb.setLive(false);
+	}
+
+	private Collection<Bomb> expiredList = new HashSet<>();
+
+	@Override
+	protected EntityRepository<Bomb> repository() {
+		return bombRepository;
+	}
+	
+	@Override
+	@Transactional
+	public void cleanUp() {
+		try {
+			if (expiredList.size() == 0)
+				return;
+			for (Bomb bomb : expiredList)
+				this.remove(bomb);
+			expiredList.clear();
+			
+		} catch (Exception e) {
+			this.addError(RMXException.unexpected(e));
+		} finally {
+			System.gc();
+		}
+
+	}
+
+
+	@Override
+	public Collection<Bomb> update() {
+		for (Bomb bomb: getEntities())
+			if (bomb.hasTimeRunOut()) 
+				expiredList.add(bomb);
+		return getEntities();
+	}
+
+
+	
+
+}

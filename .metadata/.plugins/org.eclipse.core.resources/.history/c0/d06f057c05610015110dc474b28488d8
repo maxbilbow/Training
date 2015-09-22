@@ -1,0 +1,52 @@
+package fjwa.repository;
+
+import java.util.Collection;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.stereotype.Repository;
+
+import fjwa.RMXException;
+import fjwa.model.Bomb;
+import fjwa.model.Goal;
+
+@Repository("goalRepository")
+public class GoalRepositoryImpl implements GoalRepository {
+
+	@PersistenceContext
+	private EntityManager em;
+	
+	@Override
+	public Goal save(Goal goal) {
+		em.persist(goal);
+		em.flush();
+		return goal;
+	}
+
+	@Override
+	public List<Goal> findAllGoals() {
+		try {
+			List<Goal> allBombs = goalRepository.getBombList(this.bombs);
+			if (allBombs != null)
+				this.bombs = allBombs;
+			
+//			this.bombs.clear();
+//
+//
+//			for (Bomb bomb : allBombs) {
+////				bomb.setLive(true);
+//				this.bombs.add(bomb);
+//			}
+//			return this.bombs;
+		} catch (RMXException e) {
+			this.addError(e);
+			e.printStackTrace();
+		} catch (Exception e) {
+			throw this.addError(RMXException.unexpected(e));
+		}
+		return this.bombs;
+	}
+
+}

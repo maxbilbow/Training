@@ -1,0 +1,7 @@
+package fjwa.repository;
+
+import fjwa.model.Goal;
+
+public interface GoalRepository extends EntityRepository<Goal> {
+
+}

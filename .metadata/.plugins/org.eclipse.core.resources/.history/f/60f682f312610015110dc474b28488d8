@@ -1,0 +1,14 @@
+package fjwa.repository;
+
+
+import fjwa.model.Bomb;
+
+@Repository("bombRepository")
+public class BombRepositoryImpl extends AbstractRepository<Bomb> implements EntityRepository<Bomb> {
+
+	@Override
+	protected String selectAllFromTable() {
+		return "Select b from Bomb b";
+	}
+
+}

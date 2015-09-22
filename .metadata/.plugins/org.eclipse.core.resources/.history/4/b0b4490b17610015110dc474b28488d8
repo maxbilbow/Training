@@ -1,0 +1,11 @@
+package fjwa.repository;
+
+import java.util.Collection;
+import java.util.List;
+
+import fjwa.RMXException;
+import fjwa.model.Bomb;
+
+public interface BombRepository extends EntityRepository<Bomb> {
+	
+}

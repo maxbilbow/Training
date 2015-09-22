@@ -1,0 +1,26 @@
+package fjwa.service;
+
+import java.util.Collection;
+import java.util.List;
+
+import org.hibernate.service.Service;
+
+import fjwa.RMXException;
+import fjwa.model.Bomb;
+
+public interface BombService extends EntityService {
+	
+	
+	@Deprecated
+	Collection<Bomb> update();
+	
+	
+	
+	
+	
+	void cleanUp();	
+	
+	void defuse();
+
+	
+}

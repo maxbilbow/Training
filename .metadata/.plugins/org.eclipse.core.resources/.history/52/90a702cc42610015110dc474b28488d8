@@ -1,0 +1,27 @@
+package fjwa.repository;
+
+
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import fjwa.model.Goal;
+import fjwa.model.GoalReport;
+import fjwa.service.GoalRepository;
+
+@Repository("goalRepository")
+public class GoalRepositoryImpl extends AbstractRepository<Goal> implements GoalRepository {
+
+	@Override
+	protected String selectAllFromTable() {
+		return "Select g from Goal g";
+	}
+
+	@Override
+	public List<GoalReport> findAllGoalReports() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,7 +1,6 @@
 package fjwa.controller;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -16,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import fjwa.RMXException;
 import fjwa.model.Bomb;
 import fjwa.model.Bombs;
 import fjwa.service.BombService;
@@ -28,105 +26,79 @@ public class BoomController {
 	@Autowired
 	private BombService bombService;
 
+	private List<Bomb> bombs;
+
 	@RequestMapping(value = "/boom") //The page name (.whatever - i.e. html)
 	public String sayBoom(Model model) {
-		bombService.update();
-		this.findAllBombs(model); 
-		model.addAttribute("errors", bombService.getErrors());
+		updateModel(model, bombService.synchronize());
 		return "boom"; //The jsp name?
 	}
 
+	private void updateModel(Model model, List<Bomb> bombs) {
+		this.bombs = bombs;
+		if (bombs == null || bombs.isEmpty()) 
+			model.addAttribute("boom", "No bombs... safe!");
+		else {
+			model.addAttribute("boom", "Time is ticking...");
+		}
+		model.addAttribute("bombs", bombs);
+		model.addAttribute("fjwa.bombs", (List<Bomb>) bombs);
+		model.addAttribute("errors", bombService.getErrors());
+	}
 	@RequestMapping(value = "addBomb", method = RequestMethod.GET)
-	public String addBomb(Model model) {//, BindingResult result){
+	public @ResponseBody List<Bomb> addBomb(Model model) {//, BindingResult result){
 		Bomb bomb = Bombs.newBomb();
-
-		try {
-//			bombService.addBomb(bomb);
-			bombService.save(bomb);
-		} catch (Exception e) {
-			e.printStackTrace();
-			model.addAttribute("errors", e.getLocalizedMessage());
-		} 
-		model.addAttribute("errors", bombService.getErrors());
-		return "redirect:boom.html";
+		bombService.save(bomb);
+		return  this.bombs = bombService.synchronize();//"redirect:boom.html";
 	}
 
+//
+//	@RequestMapping(value = "addBomb", method = RequestMethod.POST)
+//	public String updateBomb(@Valid @ModelAttribute("bomb") Bomb bomb, BindingResult result){
+//		//		Bomb bomb = WeakBomb.newInstance();
+//		System.out.println("(UPDATE BOMB) result has errors: " + result.hasErrors());
+//
+//		System.out.println("Timer set: " + bomb.timeRemaining());
+//
+//		if(result.hasErrors()) {
+//
+//			return "redirect:boom.html";
+//		} else {
+//			bombService.save(bomb);
+//		}
+//		return "redirect:boom.html";
+//	}
 
-	@RequestMapping(value = "addBomb", method = RequestMethod.POST)
-	public String updateBomb(@Valid @ModelAttribute("bomb") Bomb bomb, BindingResult result){
-		//		Bomb bomb = WeakBomb.newInstance();
-		System.out.println("(UPDATE BOMB) result has errors: " + result.hasErrors());
-
-		System.out.println("Timer set: " + bomb.timeRemaining());
-
-		if(result.hasErrors()) {
-			
-			return "redirect:boom.html";
-		} else {
-			bombService.save(bomb);
-		}
-		return "redirect:boom.html";
+	@RequestMapping(value = "removeAll", method = RequestMethod.GET)
+	public @ResponseBody List<Bomb> removeAll(Model model){
+		updateModel(model, bombService.removeAll());
+		return this.bombs;
 	}
-
-	@RequestMapping(value = "cleanUp", method = RequestMethod.GET)
-	public String cleanUp(Model model){
-		try {
-			bombService.cleanUp();
-		} catch (RMXException e) {
-			e.printStackTrace();
-		}
-		model.addAttribute("errors", bombService.getErrors());
-		return "redirect:boom.html";
-	}
+	
+//	@RequestMapping(value = "clean", method = RequestMethod.GET)
+//	public @ResponseBody List<Bomb> clean(Model model){
+//		updateModel(model, bombService.clean());
+//		return this.bombs;
+//	}
 
 
-	@RequestMapping(value = "defuse", method = RequestMethod.GET)
-	public String defuse(Model model){
-		try {
-			bombService.defuse();
-			bombService.synchronize();
-		} catch (RMXException e) {
-			e.printStackTrace();
-		}
-		model.addAttribute("errors", bombService.getErrors());
-		return "redirect:boom.html";
-	}
 
-
-	@RequestMapping(value = "findAllBombs", method = RequestMethod.GET) //bombs?
-	//	@Retention(RetentionPolicy.SOURCE)
-	public @ResponseBody List<String> findAllBombs(Model model) {
-		System.out.println("findAllBombs called");
-		Collection<Bomb> bombs = null;
-		try {
-			bombs = bombService.findAllBombs();
-		} catch (RMXException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} finally {
-			if (bombs == null || bombs.isEmpty()) 
-				model.addAttribute("boom", "No bombs... safe!");
-			else {
-				model.addAttribute("boom", "Time is ticking...");
-
-				String result = "";
-				for (Bomb bomb : bombs) {
-					result += "<br/> " + bomb.toString();
-				}
-
-				model.addAttribute("bombs", result);
-				return Arrays.asList(result);
-			}
-		}
-		return Arrays.asList("No Bombs");
-	}
-
+	/**
+	 * @warning Should be called in client-side js
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping(value = "updateBombs", method = RequestMethod.GET) //bombs?
-	public @ResponseBody Collection<Bomb> updateBombs(Model model) {
-		//		System.out.println("updateBombs called");
-		return bombService.update();
+	public @ResponseBody List<Bomb> updateBombs(Model model) {
+//		updateModel(model, bombService.synchronize());
+		return bombs;
 	}
 
+	@RequestMapping(value = "defuse", method = RequestMethod.GET) //bombs?
+	public @ResponseBody List<Bomb> defuse(Model model) {
+		updateModel(model, bombService.defuse());
+		return this.bombs;
+	}
 
 
 }

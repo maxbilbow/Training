@@ -6,19 +6,22 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import fjwa.model.Activity;
 import fjwa.model.Exercise;
-import fjwa.repository.ExerciseRepository;
-import fjwa.repository.ExerciseRepositoryImpl;
+import fjwa.repository.EntityRepository;
 
 
 @Service("exerciseService")
-public class ExerciseServiceImpl implements ExerciseService {
+public class ExerciseServiceImpl extends AbstractEntityService<Exercise> implements ExerciseService {
 
 	@Autowired
-	private ExerciseRepository repository;
+	private EntityRepository<Exercise> exerciseRepository;
+	
+	@Override
+	protected EntityRepository<Exercise> repository() {
+		return exerciseRepository;
+	}
 	
 	@Override
 	public List<Activity> findAllActivities() {
@@ -39,12 +42,4 @@ public class ExerciseServiceImpl implements ExerciseService {
 		
 		return activities;
 	}
-
-	@Override
-	@Transactional
-	public Exercise save(Exercise entity) {
-		entity = repository.save(entity);
-		return entity;
-	}
-	
 }

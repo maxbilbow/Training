@@ -1,0 +1,18 @@
+package fjwa.repository;
+
+import java.util.Collection;
+
+import fjwa.RMXException;
+
+
+
+public interface EntityRepository<E> {
+
+	Collection<E> loadAll() throws RMXException;
+
+	E save(E entity) throws RMXException;
+
+	E remove(E expired) throws RMXException;
+
+	E synchronize(E entity) throws RMXException;
+}

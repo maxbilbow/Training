@@ -1,0 +1,12 @@
+package fjwa.service;
+
+import java.util.List;
+
+import fjwa.RMXException;
+import fjwa.model.Goal;
+import fjwa.model.GoalReport;
+import fjwa.repository.EntityRepository;
+
+public interface GoalRepository extends EntityRepository<Goal> {
+	List<GoalReport> findAllGoalReports() throws RMXException;
+}

@@ -1,5 +1,0 @@
-package com.maxbilbow.practice;
-public class MyClass {
-	private String name;
-	private int value;
-}

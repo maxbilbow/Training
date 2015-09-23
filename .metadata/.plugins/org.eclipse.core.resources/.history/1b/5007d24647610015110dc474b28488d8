@@ -1,5 +1,0 @@
-package fjwa.repository;
-
-public interface BombRepository extends AbstractRepository<E> implements EntityRepository<E> {
-
-}

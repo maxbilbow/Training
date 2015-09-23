@@ -1,5 +1,0 @@
-package fjwa.repository;
-
-public interface BombRepository {
-
-}

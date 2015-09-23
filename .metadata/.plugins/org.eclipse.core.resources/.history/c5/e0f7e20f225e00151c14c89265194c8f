@@ -1,5 +1,0 @@
-package fjwa.service;
-
-public interface GoalService {
-	
-}

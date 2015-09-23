@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<workingSetManager>
-<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1442491981939_1" label="FitnessTracker" name="FitnessTracker">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/FitnessTracker" type="4"/>
-</workingSet>
-<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1442226212530_0" label="Window Working Set" name="Aggregate for window 1442226212530"/>
-</workingSetManager>

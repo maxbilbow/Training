@@ -1,7 +1,0 @@
-package fjwa.model;
-
-public class Bombs {
-	static BombInterface newBomb() {
-		return new Bomb();
-	}
-}

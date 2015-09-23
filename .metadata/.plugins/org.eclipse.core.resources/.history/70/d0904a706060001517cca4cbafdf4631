@@ -1,5 +1,0 @@
-package fjwa;
-
-public enum RMXError {
-	 MethodNotImplementedException, Default;
-}

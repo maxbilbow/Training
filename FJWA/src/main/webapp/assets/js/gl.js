@@ -143,8 +143,8 @@ function glrun(mode, local) {
     rmx.canvas = document.querySelector("canvas");
     var leftPanel = document.querySelector("div#left_panel");
 //    if (window.screen.width >= 1200 * window.devicePixelRatio) {
-     rmx.canvas.width = leftPanel.offsetWidth * 0.9 / 2;// * window.devicePixelRatio / 2; 
-     rmx.canvas.height = 600 * window.devicePixelRatio;
+     rmx.canvas.width = leftPanel.offsetWidth * 0.9;// * window.devicePixelRatio / 2;
+     rmx.canvas.height = 400 * window.devicePixelRatio;
 //    }
    
     rmx.gl = rmx.canvas.getContext("webgl");

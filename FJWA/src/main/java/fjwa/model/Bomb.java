@@ -19,13 +19,13 @@ import org.hibernate.validator.constraints.Range;
 			query="Select b from Bomb b"
 			)
 })
-public class Bomb {
+public class Bomb implements IEntity {
 	public static final String 
 	FIND_ALL_BOMBS = "findAllBombs", 
 	CLASS = "fjwa.model.Bomb";
 	@Id
 	@GeneratedValue
-	private long id;
+	private Long id;
 	
 	private Instant startTime;
 
@@ -70,7 +70,7 @@ public class Bomb {
 		return description;
 	}
 	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
@@ -96,8 +96,8 @@ public class Bomb {
 		return live && !this.isOutOfTime();
 	}
 	
-	public long setId(long id) {
-		return this.id = id;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public void setLive(boolean live) {

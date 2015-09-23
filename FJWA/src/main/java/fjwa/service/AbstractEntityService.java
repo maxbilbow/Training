@@ -8,13 +8,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import fjwa.model.IEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 import fjwa.RMXException;
 import fjwa.repository.EntityRepository;
 
-public abstract class AbstractEntityService<E> implements EntityService<E> {
+public abstract class AbstractEntityService<E extends IEntity> implements EntityService<E> {
 
 	private List<E> entities = new ArrayList<>();
 	private Map<String,String> seriousErrors = new HashMap<>();
@@ -103,7 +104,7 @@ public abstract class AbstractEntityService<E> implements EntityService<E> {
 //			List<E> qList = repository().loadAll();
 			for (E entity : entities) {
 				try {
-					repository().synchronize(entity);
+					repository().save(entity);//.synchronize(entity);
 				} catch (Exception e) {
 					addError(RMXException.unexpected(e,"Could not sync " + entity));
 				}

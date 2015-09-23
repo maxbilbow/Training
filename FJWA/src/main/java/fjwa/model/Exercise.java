@@ -18,14 +18,14 @@ import org.hibernate.validator.constraints.Range;
 			query="Select e from Exercise e"
 			)
 })
-public class Exercise {
+public class Exercise implements IEntity{
 	public static final String 
 	FIND_ALL_EXERCISES = "findAllExercises",
 	CLASS = "fjwa.model.Exercise";
 	
 	@Id
 	@GeneratedValue
-	private long id;
+	private Long id;
 	
 	@Range(min = 1, max = 120)
 	private int minutes;
@@ -47,7 +47,7 @@ public class Exercise {
 		return goal;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
@@ -66,7 +66,7 @@ public class Exercise {
 		this.goal = goal;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

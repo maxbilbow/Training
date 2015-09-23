@@ -20,7 +20,9 @@ import fjwa.model.Bombs;
 import fjwa.service.BombService;
 
 @Controller
-@SessionAttributes("bomb")
+@SessionAttributes({
+		"bomb", "bombs","fjwa.bombs"
+})
 public class BoomController {
 
 	@Autowired

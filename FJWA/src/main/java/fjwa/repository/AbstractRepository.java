@@ -8,13 +8,14 @@ import javax.persistence.PersistenceException;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
+import fjwa.model.IEntity;
 import org.hibernate.HibernateException;
 
 import click.rmx.Tests;
 import fjwa.RMXError;
 import fjwa.RMXException;
 
-public abstract class AbstractRepository<E> implements EntityRepository<E> {
+public abstract class AbstractRepository<E extends IEntity> implements EntityRepository<E> {
 
 	@PersistenceContext
 	protected EntityManager em;
@@ -22,8 +23,12 @@ public abstract class AbstractRepository<E> implements EntityRepository<E> {
 	@Override
 	public E save(E entity) throws RMXException {
 		try {
-			em.persist(entity);
-			em.flush();
+			if (entity.getId() == null) {
+				em.persist(entity);
+				em.flush();
+			} else {
+				entity = em.merge(entity);
+			}
 		} catch (Exception e) {
 			throw RMXException.unexpected(e);
 		}
@@ -44,11 +49,12 @@ public abstract class AbstractRepository<E> implements EntityRepository<E> {
 
 
 	@Override
+	@Deprecated
 	public E synchronize(E entity) throws RMXException {
 		try {
 //			if (em.contains(entity)) {
-				em.merge(entity);
-				em.flush();
+				entity = em.merge(entity);
+//				em.flush();
 //			}
 		} catch (Exception e) {
 			throw RMXException.unexpected(e);

@@ -31,7 +31,7 @@ import org.hibernate.validator.constraints.Range;
 			+ "from Goal g, Exercise e where g.id = e.goal.id"
 			)
 })
-public class Goal {
+public class Goal implements IEntity {
 	public static final String 
 	FIND_GOAL_REPORTS = "findGoalReports",
 	FIND_ALL_GOALS = "findAllGoals",
@@ -40,7 +40,7 @@ public class Goal {
 	@Id
 	@GeneratedValue
 	@Column(name="GOAL_ID")
-	private long id;
+	private Long id;
 	
 	@Range(min = 1, max = 120)
 	@Column(name="MINUTES")
@@ -68,14 +68,14 @@ public class Goal {
 	/**
 	 * @return the id
 	 */
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	

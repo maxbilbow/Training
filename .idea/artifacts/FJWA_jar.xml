@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="FJWA:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/FJWA_jar</output-path>
-    <root id="archive" name="FJWA.jar">
-      <element id="module-output" name="FJWA" />
-    </root>
-  </artifact>
-</component>

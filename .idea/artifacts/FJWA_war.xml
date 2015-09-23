@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="FJWA:war">
-    <output-path>$PROJECT_DIR$/FJWA/target</output-path>
-    <root id="archive" name="FJWA.war">
-      <element id="artifact" artifact-name="FJWA:war exploded" />
-    </root>
-  </artifact>
-</component>
